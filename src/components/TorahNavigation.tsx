@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Parasha } from "../types/torah";
+import { getDataPath } from "@/utils/pathUtils";
 
 interface TorahNavigationProps {
   currentBook: string;
@@ -52,8 +53,8 @@ export const TorahNavigation = ({
     const loadTorahStructure = async () => {
       try {
         const timestamp = Date.now();
-        const [structureResponse, parashasResponse] = await Promise.all([
-          fetch(`/data/metadata/torah-structure.json?v=${timestamp}&cache=false`, {
+                const [structureResponse, parashasResponse] = await Promise.all([
+          fetch(`${getDataPath('metadata/torah-structure.json')}?v=${timestamp}&cache=false`, {
             cache: 'no-cache',
             headers: {
               'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -61,11 +62,11 @@ export const TorahNavigation = ({
               'Expires': '0'
             }
           }),
-          fetch(`/data/metadata/parashas.json?v=${timestamp}&cache=false`, {
+          fetch(`${getDataPath('metadata/parashas.json')}?v=${timestamp}&cache=false`, {
             cache: 'no-cache',
             headers: {
               'Cache-Control': 'no-cache, no-store, must-revalidate',
-              'Pragma': 'no-cache',
+              'Pragma': 'no-cache', 
               'Expires': '0'
             }
           })

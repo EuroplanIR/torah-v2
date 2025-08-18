@@ -222,7 +222,7 @@ export const useTorahData = (): UseTorahDataReturn => {
       }
 
       // Load book from file
-      const response = await fetch(`/data/${bookName.toLowerCase()}.json`);
+      const response = await fetch(getDataPath(`${bookName.toLowerCase()}.json`));
       if (!response.ok) {
         throw new Error(`Не удалось загрузить книгу ${bookName}`);
       }
