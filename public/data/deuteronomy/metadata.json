@@ -4,16 +4,31 @@
   "hebrew": "דברים",
   "russian": "Дварим",
   "transliteration": "Devarim",
-  "description": "Пятая книга Торы, последние речи Моисея перед входом народа в Землю Обетованную",
+  "description": "Пятая книга Торы, содержащая последние речи Моисея перед народом",
   "totalChapters": 34,
-  "totalVerses": 959,
+  "totalVerses": 955,
   "chapters": [
-    {"number": 1, "verses": 46, "title": "Воспоминания о пути", "theme": "История странствий"},
-    {"number": 2, "verses": 37, "title": "Завоевания", "theme": "Победы народа"},
-    {"number": 3, "verses": 29, "title": "Разделение земли", "theme": "Наследование"},
-    {"number": 4, "verses": 49, "title": "Призыв к верности", "theme": "Соблюдение заповедей"}
+    {"number": 1, "verses": 46, "title": "Повторение истории", "theme": "Воспоминания о пустыне"},
+    {"number": 2, "verses": 37, "title": "Путешествие к Иордану", "theme": "Завоевания Заиорданья"},
+    {"number": 3, "verses": 29, "title": "Победы над царями", "theme": "Территории колен"},
+    {"number": 4, "verses": 49, "title": "Призыв к верности", "theme": "Соблюдение заповедей"},
+    {"number": 5, "verses": 33, "title": "Десять заповедей", "theme": "Повторение Синайского завета"}
   ],
-  "availableChapters": [1],
-  "lastUpdated": "2024-01-15T10:30:00Z",
-  "dataVersion": "1.0.0"
+  "availableChapters": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
+  "parashas": [
+    {"id": "devarim", "name": "Дварим", "startChapter": 1, "endChapter": 3, "startVerse": 1, "endVerse": 22},
+    {"id": "vaetchanan", "name": "Ваэтханан", "startChapter": 3, "endChapter": 7, "startVerse": 23, "endVerse": 11},
+    {"id": "eikev", "name": "Эйкев", "startChapter": 7, "endChapter": 11, "startVerse": 12, "endVerse": 25},
+    {"id": "reeh", "name": "Рээ", "startChapter": 11, "endChapter": 16, "startVerse": 26, "endVerse": 17},
+    {"id": "shoftim", "name": "Шофтим", "startChapter": 16, "endChapter": 21, "startVerse": 18, "endVerse": 9},
+    {"id": "ki_teitzei", "name": "Ки Тецэ", "startChapter": 21, "endChapter": 25, "startVerse": 10, "endVerse": 19},
+    {"id": "ki_tavo", "name": "Ки Таво", "startChapter": 26, "endChapter": 29, "startVerse": 1, "endVerse": 8},
+    {"id": "nitzavim", "name": "Ницавим", "startChapter": 29, "endChapter": 30, "startVerse": 9, "endVerse": 20},
+    {"id": "vayeilech", "name": "Вайелех", "startChapter": 31, "endChapter": 31, "startVerse": 1, "endVerse": 30},
+    {"id": "haazinu", "name": "Хаазину", "startChapter": 32, "endChapter": 32, "startVerse": 1, "endVerse": 52},
+    {"id": "vezot_haberachah", "name": "Везот hаБраха", "startChapter": 33, "endChapter": 34, "startVerse": 1, "endVerse": 12}
+  ],
+  "availableParashas": ["devarim", "vaetchanan", "eikev", "reeh", "shoftim", "ki_teitzei", "ki_tavo", "nitzavim", "vayeilech", "haazinu", "vezot_haberachah"],
+  "lastUpdated": "2025-01-21T10:30:00Z",
+  "dataVersion": "2.0.0"
 }

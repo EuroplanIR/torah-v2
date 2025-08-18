@@ -14,7 +14,22 @@
     {"number": 4, "verses": 26, "title": "Каин и Авель", "theme": "Первое убийство"},
     {"number": 5, "verses": 32, "title": "Родословие от Адама", "theme": "Поколения до потопа"}
   ],
-  "availableChapters": [1, 2, 3],
+  "availableChapters": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+  "parashas": [
+    {"id": "beresheet", "name": "Берешит", "startChapter": 1, "endChapter": 6, "startVerse": 1, "endVerse": 8},
+    {"id": "noach", "name": "Ноах", "startChapter": 6, "endChapter": 11, "startVerse": 9, "endVerse": 32},
+    {"id": "lech_lecha", "name": "Лех Леха", "startChapter": 12, "endChapter": 17, "startVerse": 1, "endVerse": 27},
+    {"id": "vayera", "name": "Вайера", "startChapter": 18, "endChapter": 22, "startVerse": 1, "endVerse": 24},
+    {"id": "chayei_sarah", "name": "Хайей Сара", "startChapter": 23, "endChapter": 25, "startVerse": 1, "endVerse": 18},
+    {"id": "toldot", "name": "Толдот", "startChapter": 25, "endChapter": 28, "startVerse": 19, "endVerse": 9},
+    {"id": "vayetzei", "name": "Вайецэ", "startChapter": 28, "endChapter": 32, "startVerse": 10, "endVerse": 3},
+    {"id": "vayishlach", "name": "Вайишлах", "startChapter": 32, "endChapter": 36, "startVerse": 4, "endVerse": 43},
+    {"id": "vayeshev", "name": "Вайешев", "startChapter": 37, "endChapter": 40, "startVerse": 1, "endVerse": 23},
+    {"id": "miketz", "name": "Микец", "startChapter": 41, "endChapter": 44, "startVerse": 1, "endVerse": 17},
+    {"id": "vayigash", "name": "Вайигаш", "startChapter": 44, "endChapter": 47, "startVerse": 18, "endVerse": 27},
+    {"id": "vayechi", "name": "Вайехи", "startChapter": 47, "endChapter": 50, "startVerse": 28, "endVerse": 26}
+  ],
+  "availableParashas": ["beresheet", "noach", "lech_lecha", "vayera", "chayei_sarah", "toldot", "vayetzei", "vayishlach", "vayeshev", "miketz", "vayigash", "vayechi"],
   "lastUpdated": "2024-01-15T10:30:00Z",
   "dataVersion": "1.0.0"
 }
