@@ -5,21 +5,12 @@
       "english": "Genesis",
       "hebrew": "בראשית",
       "russian": "Берешит",
-      "transliteration": "Bereishit",
+      "transliteration": "Beresheet",
       "chapters": 50,
       "totalVerses": 1533,
       "totalParashas": 12,
       "availableParashas": ["beresheet", "noach", "lech_lecha", "vayera", "chayei_sarah", "toldot", "vayetzei", "vayishlach", "vayeshev", "miketz", "vayigash", "vayechi"],
-      "currentlyAvailable": {
-        "chapters": [1, 2, 3],
-        "verses": {
-          "1": [1],
-          "2": [1],  
-          "3": [1]
-        },
-        "parashas": ["beresheet", "noach", "lech_lecha", "vayera", "chayei_sarah", "toldot", "vayetzei", "vayishlach", "vayeshev", "miketz", "vayigash", "vayechi"]
-      },
-      "description": "Первая книга Торы, описывающая сотворение мира и историю патриархов"
+      "description": "Первая книга Торы, рассказывающая о сотворении мира и истории праотцов"
     },
     {
       "id": "exodus",
@@ -28,56 +19,34 @@
       "russian": "Шмот",
       "transliteration": "Shemot",
       "chapters": 40,
-      "totalVerses": 1209,
+      "totalVerses": 1213,
       "totalParashas": 11,
       "availableParashas": ["shemot", "vaera", "bo", "beshalach", "yitro", "mishpatim", "terumah", "tetzaveh", "ki_tisa", "vayakhel", "pekudei"],
-      "currentlyAvailable": {
-        "chapters": [1, 10],
-        "verses": {
-          "1": [1, 2, 3, 4],
-          "10": [1]
-        },
-        "parashas": ["shemot", "vaera", "bo", "beshalach", "yitro", "mishpatim", "terumah", "tetzaveh", "ki_tisa", "vayakhel", "pekudei"]
-      },
-      "description": "Вторая книга Торы, рассказывающая об исходе из Египта"
+      "description": "Вторая книга Торы, повествующая об исходе из Египта"
     },
     {
       "id": "leviticus",
       "english": "Leviticus",
       "hebrew": "ויקרא", 
-      "russian": "Ваикра",
+      "russian": "Вайикра",
       "transliteration": "Vayikra",
       "chapters": 27,
       "totalVerses": 859,
       "totalParashas": 10,
-      "availableParashas": ["vayikra", "tzav", "shmini", "tazria", "metzora", "acharei_mot", "kedoshim", "emor", "behar", "bechukotai"],
-      "currentlyAvailable": {
-        "chapters": [1],
-        "verses": {
-          "1": [1, 2, 3, 4]
-        },
-        "parashas": ["vayikra", "tzav", "shmini", "tazria", "metzora", "acharei_mot", "kedoshim", "emor", "behar", "bechukotai"]
-      },
-      "description": "Третья книга Торы, содержащая законы о жертвоприношениях и чистоте"
+      "availableParashas": ["vayikra", "tzav", "shemini", "tazria", "metzora", "acharei_mot", "kedoshim", "emor", "behar", "bechukotai"],
+      "description": "Третья книга Торы, посвященная законам святости"
     },
     {
       "id": "numbers",
       "english": "Numbers",
       "hebrew": "במדבר",
-      "russian": "Бемидбар", 
-      "transliteration": "Bemidbar",
+      "russian": "Бамидбар", 
+      "transliteration": "Bamidbar",
       "chapters": 36,
       "totalVerses": 1288,
       "totalParashas": 10,
-      "availableParashas": ["bamidbar", "nasso", "behaalotcha", "shlach", "korach", "chukat", "balak", "pinchas", "matot", "masei"],
-      "currentlyAvailable": {
-        "chapters": [1],
-        "verses": {
-          "1": [1, 2, 3, 4]
-        },
-        "parashas": ["bamidbar", "nasso", "behaalotcha", "shlach", "korach", "chukat", "balak", "pinchas", "matot", "masei"]
-      },
-      "description": "Четвертая книга Торы о странствии в пустыне"
+      "availableParashas": ["bamidbar", "nasso", "behaalotcha", "shelach", "korach", "chukat", "balak", "pinchas", "matot", "masei"],
+      "description": "Четвертая книга Торы о странствиях в пустыне"
     },
     {
       "id": "deuteronomy",
@@ -89,25 +58,13 @@
       "totalVerses": 955,
       "totalParashas": 11,
       "availableParashas": ["devarim", "vaetchanan", "eikev", "reeh", "shoftim", "ki_teitzei", "ki_tavo", "nitzavim", "vayeilech", "haazinu", "vezot_haberachah"],
-      "currentlyAvailable": {
-        "chapters": [1],
-        "verses": {
-          "1": [1, 2, 3, 4]
-        },
-        "parashas": ["devarim", "vaetchanan", "eikev", "reeh", "shoftim", "ki_teitzei", "ki_tavo", "nitzavim", "vayeilech", "haazinu", "vezot_haberachah"]
-      },
-      "description": "Пятая книга Торы, последние речи Моисея"
+      "description": "Пятая книга Торы, последние речи Моше"
     }
   ],
   "totalBooks": 5,
-  "totalChapters": 187,
-  "totalVerses": 5844,
+  "totalChapters": 187, 
+  "totalVerses": 5848,
   "totalParashas": 54,
-  "currentlyAvailable": {
-    "chapters": 9,
-    "verses": 20,
-    "parashas": 5,
-    "completionRate": "0.34%"
-  },
-  "lastUpdated": "2024-01-15T10:30:00Z"
+  "lastUpdated": "2025-01-21",
+  "version": "1.0.0"
 }
