@@ -386,11 +386,27 @@ class ModularDataLoader {
    */
   async getAvailableChapters(bookId: string): Promise<number[]> {
     try {
+      console.log('🔍 getAvailableChapters called for:', bookId);
       const metadata = await this.loadBookMetadata(bookId);
-      return metadata.availableChapters || [];
+      console.log('📋 Loaded metadata for', bookId, ':', metadata);
+      const chapters = metadata.availableChapters || [];
+      console.log('📊 Available chapters:', chapters);
+      return chapters;
     } catch (error) {
-      console.error(`Error getting available chapters for ${bookId}:`, error);
-      return [];
+      console.error(`❌ Error getting available chapters for ${bookId}:`, error);
+      
+      // Fallback данные для основных книг
+      const fallbackChapters: Record<string, number[]> = {
+        'genesis': Array.from({ length: 50 }, (_, i) => i + 1),
+        'exodus': Array.from({ length: 40 }, (_, i) => i + 1),
+        'leviticus': Array.from({ length: 27 }, (_, i) => i + 1),
+        'numbers': Array.from({ length: 36 }, (_, i) => i + 1),
+        'deuteronomy': Array.from({ length: 34 }, (_, i) => i + 1)
+      };
+      
+      const fallback = fallbackChapters[bookId] || [1];
+      console.log('🚨 Using fallback chapters for', bookId, ':', fallback);
+      return fallback;
     }
   }
 
@@ -453,7 +469,10 @@ class ModularDataLoader {
 
   async getAvailableVerses(bookId: string, chapter: number, parashaId?: string): Promise<number[]> {
     try {
+      console.log('🔍 getAvailableVerses called for:', bookId, chapter, parashaId);
+      
       if (parashaId) {
+        console.log('📖 Using parasha-specific logic for:', parashaId);
         // УНИВЕРСАЛЬНАЯ система для всех пересекающихся глав
         const range = await this.getParashaVerseRange(bookId, chapter, parashaId);
         if (range) {
@@ -461,6 +480,7 @@ class ModularDataLoader {
           for (let i = range.start; i <= range.end; i++) {
             verses.push(i);
           }
+          console.log('📊 Parasha verses:', verses);
           return verses;
         }
       }
