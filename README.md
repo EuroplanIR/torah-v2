@@ -20,13 +20,13 @@
 
 ## 📱 Демо
 
-🔗 **[Перейти к приложению](https://your-username.github.io/torah-v2)**
+🔗 **[Перейти к приложению](https://europlanir.github.io/torah-v2)**
 
 ## 🛠 Установка и запуск
 
 ```bash
 # Клонирование репозитория
-git clone https://github.com/your-username/torah-v2.git
+git clone https://github.com/EuroplanIR/torah-v2.git
 cd torah-v2
 
 # Установка зависимостей

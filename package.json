@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "homepage": "https://your-username.github.io/torah-v2",
+  "homepage": "https://europlanir.github.io/torah-v2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
