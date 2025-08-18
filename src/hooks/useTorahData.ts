@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { TorahDatabase, TorahBook, HebrewLexicon } from '@/types/torah';
 import { dataLoaderUtils } from '@/utils/dataLoader';
+import { getDataPath } from '@/utils/pathUtils';
 
 interface UseTorahDataReturn {
   database: TorahDatabase | null;
@@ -111,15 +112,15 @@ export const useTorahData = (): UseTorahDataReturn => {
 
     // Load metadata
     setProgress({ loaded: 1, total: 5, currentOperation: 'Загрузка метаданных...' });
-    promises.push(fetch('/data/metadata.json').then(r => r.json()));
+    promises.push(fetch(getDataPath('metadata.json')).then(r => r.json()));
 
     // Load lexicon
     setProgress({ loaded: 2, total: 5, currentOperation: 'Загрузка словаря...' });
-    promises.push(fetch('/data/hebrew-lexicon.json').then(r => r.json()));
+    promises.push(fetch(getDataPath('hebrew-lexicon.json')).then(r => r.json()));
 
     // Load first book for quick start
     setProgress({ loaded: 3, total: 5, currentOperation: 'Загрузка книг...' });
-    promises.push(fetch('/data/genesis.json').then(r => r.json()));
+    promises.push(fetch(getDataPath('genesis.json')).then(r => r.json()));
 
     try {
       const [metadata, lexicon, genesis] = await Promise.all(promises);

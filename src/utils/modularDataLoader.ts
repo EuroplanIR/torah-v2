@@ -7,6 +7,7 @@ import {
   HebrewLexicon,
   Parasha 
 } from '@/types/torah';
+import { getDataPath } from './pathUtils';
 
 interface ModularDataCache {
   booksIndex?: BooksIndex;
@@ -31,6 +32,8 @@ class ModularDataLoader {
   private readonly CACHE_KEY = 'torah_modular_cache';
   private readonly CACHE_VERSION = '1.0.0';
 
+
+
   /**
    * Загружает индекс всех книг
    */
@@ -40,7 +43,7 @@ class ModularDataLoader {
     }
 
     try {
-      const response = await fetch('/data/metadata/books.json');
+      const response = await fetch(getDataPath('metadata/books.json'));
       if (!response.ok) {
         throw new Error(`Failed to load books index: ${response.status}`);
       }
@@ -65,7 +68,7 @@ class ModularDataLoader {
     }
 
     try {
-      const response = await fetch(`/data/${bookId}/metadata.json`);
+      const response = await fetch(getDataPath(`${bookId}/metadata.json`));
       if (!response.ok) {
         throw new Error(`Failed to load ${bookId} metadata: ${response.status}`);
       }
@@ -96,21 +99,21 @@ class ModularDataLoader {
       
       // Пробуем загрузить из новой структуры (с парашот)
       if (parashaId) {
-        response = await fetch(`/data/${bookId}/${parashaId}/chapter-${chapter.toString().padStart(3, '0')}.json`);
+        response = await fetch(getDataPath(`${bookId}/${parashaId}/chapter-${chapter.toString().padStart(3, '0')}.json`));
       } else {
         // Если парша не указана, определяем её автоматически
         const parasha = await this.getParashaByChapter(bookId, chapter);
         if (parasha) {
-          response = await fetch(`/data/${bookId}/${parasha.id}/chapter-${chapter.toString().padStart(3, '0')}.json`);
+          response = await fetch(getDataPath(`${bookId}/${parasha.id}/chapter-${chapter.toString().padStart(3, '0')}.json`));
         } else {
           // Fallback на старую структуру
-          response = await fetch(`/data/${bookId}/chapter-${chapter.toString().padStart(3, '0')}.json`);
+          response = await fetch(getDataPath(`${bookId}/chapter-${chapter.toString().padStart(3, '0')}.json`));
         }
       }
       
       // Если не найдено в новой структуре, пробуем старую
       if (!response.ok) {
-        response = await fetch(`/data/${bookId}/chapter-${chapter.toString().padStart(3, '0')}.json`);
+        response = await fetch(getDataPath(`${bookId}/chapter-${chapter.toString().padStart(3, '0')}.json`));
       }
       
       if (!response.ok) {
@@ -143,7 +146,7 @@ class ModularDataLoader {
     }
 
     try {
-      const response = await fetch('/data/metadata/commentators.json');
+      const response = await fetch(getDataPath('metadata/commentators.json'));
       if (!response.ok) {
         throw new Error(`Failed to load commentators: ${response.status}`);
       }
@@ -168,7 +171,7 @@ class ModularDataLoader {
     }
 
     try {
-      const response = await fetch('/data/metadata/parashas.json');
+      const response = await fetch(getDataPath('metadata/parashas.json'));
       if (!response.ok) {
         throw new Error(`Failed to load parashas: ${response.status}`);
       }
@@ -221,7 +224,7 @@ class ModularDataLoader {
 
     try {
       const verseFileName = `${parashaId}-${chapter.toString().padStart(3, '0')}-${verse.toString().padStart(3, '0')}.json`;
-      const response = await fetch(`/data/${bookId}/${parashaId}/${verseFileName}`);
+      const response = await fetch(getDataPath(`${bookId}/${parashaId}/${verseFileName}`));
       
       if (!response.ok) {
         throw new Error(`Failed to load verse ${bookId} ${chapter}:${verse}: ${response.status}`);
@@ -340,10 +343,10 @@ class ModularDataLoader {
     }
 
     try {
-      const response = await fetch('/data/metadata/hebrew-lexicon.json');
+      const response = await fetch(getDataPath('metadata/hebrew-lexicon.json'));
       if (!response.ok) {
         // Пробуем старый путь для совместимости
-        const fallbackResponse = await fetch('/data/hebrew-lexicon.json');
+        const fallbackResponse = await fetch(getDataPath('hebrew-lexicon.json'));
         if (!fallbackResponse.ok) {
           throw new Error(`Failed to load Hebrew lexicon: ${response.status}`);
         }
@@ -500,7 +503,7 @@ class ModularDataLoader {
    */
   private async getTorahStructure(): Promise<any> {
     try {
-      const response = await fetch('/data/metadata/torah-structure.json');
+      const response = await fetch(getDataPath('metadata/torah-structure.json'));
       if (response.ok) {
         return await response.json();
       }

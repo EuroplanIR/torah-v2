@@ -1,4 +1,5 @@
 import { TorahDatabase, TorahBook, HebrewLexicon, HebrewWord } from '@/types/torah';
+import { getDataPath } from './pathUtils';
 
 // Data Sources Configuration
 const DATA_SOURCES = {
@@ -104,7 +105,7 @@ export class TorahDataLoader {
     
     try {
       // In production, this would fetch from morphological databases
-      const response = await fetch('/data/morphology.json');
+      const response = await fetch(getDataPath('morphology.json'));
       return await response.json();
     } catch (error) {
       console.warn('Morphology data not available, using fallback');
