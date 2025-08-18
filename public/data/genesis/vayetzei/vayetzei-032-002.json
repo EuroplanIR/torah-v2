@@ -1,0 +1,35 @@
+{
+  "book": "genesis",
+  "parasha": "vayetzei",
+  "chapter": 32,
+  "verse": 2,
+  "hebrew": [],
+  "words": [
+    {
+      "hebrew": "דָבָר",
+      "transliteration": "davar",
+      "translations": [
+        "слово",
+        "вещь",
+        "дело"
+      ],
+      "morphology": {
+        "partOfSpeech": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "root": "דבר"
+      }
+    }
+  ],
+  "commentaries": {},
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:37:35.928Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "complete",
+      "translations": "basic",
+      "commentaries": "partial"
+    },
+    "convertedFrom": "chapter-032.json"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "book": "exodus",
+  "parasha": "shemot",
+  "chapter": 2,
+  "verse": 15,
+  "hebrew": [
+    "[placeholder_word_15_1]",
+    "[placeholder_word_15_2]",
+    "[placeholder_word_15_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_15_1]",
+      "transliteration": "placeholder_15_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 15_1]",
+          "context": "[контекст для слова 15_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_15_2]",
+      "transliteration": "placeholder_15_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 15_2]",
+          "context": "[контекст для слова 15_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_15_3]",
+      "transliteration": "placeholder_15_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 15_3]",
+          "context": "[контекст для слова 15_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 2:15]",
+    "ramban": "[Комментарий Рамбана на стих 2:15]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:55.963Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "nasso",
+  "chapter": 7,
+  "verse": 53,
+  "hebrew": [
+    "[placeholder_word_53_1]",
+    "[placeholder_word_53_2]",
+    "[placeholder_word_53_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_53_1]",
+      "transliteration": "placeholder_53_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 53_1]",
+          "context": "[контекст для слова 53_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_53_2]",
+      "transliteration": "placeholder_53_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 53_2]",
+          "context": "[контекст для слова 53_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_53_3]",
+      "transliteration": "placeholder_53_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 53_3]",
+          "context": "[контекст для слова 53_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 7:53]",
+    "ramban": "[Комментарий Рамбана на стих 7:53]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.850Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

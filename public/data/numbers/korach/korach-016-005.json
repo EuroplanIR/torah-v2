@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "korach",
+  "chapter": 16,
+  "verse": 5,
+  "hebrew": [
+    "[placeholder_word_5_1]",
+    "[placeholder_word_5_2]",
+    "[placeholder_word_5_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_5_1]",
+      "transliteration": "placeholder_5_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 5_1]",
+          "context": "[контекст для слова 5_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_5_2]",
+      "transliteration": "placeholder_5_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 5_2]",
+          "context": "[контекст для слова 5_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_5_3]",
+      "transliteration": "placeholder_5_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 5_3]",
+          "context": "[контекст для слова 5_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 16:5]",
+    "ramban": "[Комментарий Рамбана на стих 16:5]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.958Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

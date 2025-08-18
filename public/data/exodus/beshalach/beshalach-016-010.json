@@ -1,0 +1,59 @@
+{
+  "book": "exodus",
+  "parasha": "beshalach",
+  "chapter": 16,
+  "verse": 10,
+  "hebrew": [
+    "[placeholder_word_10_1]",
+    "[placeholder_word_10_2]",
+    "[placeholder_word_10_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_10_1]",
+      "transliteration": "placeholder_10_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 10_1]",
+          "context": "[контекст для слова 10_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_10_2]",
+      "transliteration": "placeholder_10_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 10_2]",
+          "context": "[контекст для слова 10_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_10_3]",
+      "transliteration": "placeholder_10_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 10_3]",
+          "context": "[контекст для слова 10_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 16:10]",
+    "ramban": "[Комментарий Рамбана на стих 16:10]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.122Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

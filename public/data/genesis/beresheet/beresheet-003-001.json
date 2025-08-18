@@ -1,0 +1,51 @@
+{
+  "book": "genesis",
+  "parasha": "beresheet",
+  "chapter": 3,
+  "verse": 1,
+  "hebrew": [
+    "וְהַנָּחָשׁ",
+    "הָיָה",
+    "עָרוּם"
+  ],
+  "words": [
+    {
+      "hebrew": "וְהַנָּחָשׁ",
+      "transliteration": "v'ha-nachash",
+      "root": "נחש",
+      "translations": [
+        {
+          "meaning": "и змей",
+          "context": "животное, которое соблазнило Еву",
+          "grammar": "союз + имя существительное с артиклем",
+          "sources": [
+            "Раши"
+          ]
+        }
+      ],
+      "morphology": {
+        "partOfSpeech": "conjunction+noun",
+        "gender": "masculine",
+        "number": "singular",
+        "definiteness": "definite"
+      },
+      "occurrences": 31,
+      "frequency": "uncommon"
+    }
+  ],
+  "commentaries": {
+    "rashi": "Змей был хитрее - он был самым умным из всех животных.",
+    "ramban": "Это был настоящий змей, но им управляла злая сила.",
+    "ibn_ezra": "Хитрость змея была природной, не сверхъестественной."
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:37:35.356Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "complete",
+      "translations": "basic",
+      "commentaries": "complete"
+    },
+    "convertedFrom": "chapter-003.json"
+  }
+}

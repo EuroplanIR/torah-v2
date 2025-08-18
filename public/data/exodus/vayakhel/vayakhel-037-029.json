@@ -1,0 +1,59 @@
+{
+  "book": "exodus",
+  "parasha": "vayakhel",
+  "chapter": 37,
+  "verse": 29,
+  "hebrew": [
+    "[placeholder_word_29_1]",
+    "[placeholder_word_29_2]",
+    "[placeholder_word_29_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_29_1]",
+      "transliteration": "placeholder_29_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 29_1]",
+          "context": "[контекст для слова 29_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_29_2]",
+      "transliteration": "placeholder_29_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 29_2]",
+          "context": "[контекст для слова 29_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_29_3]",
+      "transliteration": "placeholder_29_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 29_3]",
+          "context": "[контекст для слова 29_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 37:29]",
+    "ramban": "[Комментарий Рамбана на стих 37:29]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.381Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "matot",
+  "chapter": 31,
+  "verse": 41,
+  "hebrew": [
+    "[placeholder_word_41_1]",
+    "[placeholder_word_41_2]",
+    "[placeholder_word_41_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_41_1]",
+      "transliteration": "placeholder_41_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 41_1]",
+          "context": "[контекст для слова 41_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_41_2]",
+      "transliteration": "placeholder_41_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 41_2]",
+          "context": "[контекст для слова 41_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_41_3]",
+      "transliteration": "placeholder_41_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 41_3]",
+          "context": "[контекст для слова 41_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 31:41]",
+    "ramban": "[Комментарий Рамбана на стих 31:41]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:57.096Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

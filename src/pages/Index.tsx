@@ -1,339 +1,207 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TorahWord } from "@/components/TorahWord";
 import { Commentary } from "@/components/Commentary";
 import { TorahNavigation } from "@/components/TorahNavigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Search, Bookmark, Settings } from "lucide-react";
-
-// Данные для демонстрации разных книг
-const TORAH_DATA = {
-  Genesis: {
-    hebrew: "בראשית",
-    russian: "Берешит",
-    verse: {
-      hebrew: ["בְּרֵאשִׁית", "בָּרָא", "אֱלֹהִים", "אֵת", "הַשָּׁמַיִם", "וְאֵת", "הָאָרֶץ"],
-      russian: "В начале сотворил Бог небо и землю.",
-      words: [
-        {
-          hebrew: "בְּרֵאשִׁית",
-          transliteration: "b'reshit",
-          translations: [
-            { meaning: "в начале", context: "временной период", grammar: "наречие" },
-            { meaning: "в начале творения", context: "начало всего сущего" },
-            { meaning: "сначала", context: "первым делом" }
-          ]
-        },
-        {
-          hebrew: "בָּרָא",
-          transliteration: "bara",
-          translations: [
-            { meaning: "создал", context: "творение из ничего", grammar: "глагол прошедшего времени" },
-            { meaning: "сотворил", context: "божественное творение" },
-            { meaning: "произвел", context: "привел в существование" }
-          ]
-        },
-        {
-          hebrew: "אֱלֹהִים",
-          transliteration: "Elohim",
-          translations: [
-            { meaning: "Бог", context: "множественная форма величия", grammar: "имя существительное" },
-            { meaning: "Всесильный", context: "одно из имен Всевышнего" },
-            { meaning: "Творец", context: "создатель мира" }
-          ]
-        },
-        {
-          hebrew: "אֵת",
-          transliteration: "et",
-          translations: [
-            { meaning: "— ", context: "указательная частица", grammar: "частица" },
-            { meaning: "[знак прямого дополнения]", context: "грамматическая функция" }
-          ]
-        },
-        {
-          hebrew: "הַשָּׁמַיִם",
-          transliteration: "ha-shamayim",
-          translations: [
-            { meaning: "небо", context: "небосвод", grammar: "имя существительное с артиклем" },
-            { meaning: "небеса", context: "духовные миры" },
-            { meaning: "высь", context: "верхние пределы" }
-          ]
-        },
-        {
-          hebrew: "וְאֵת",
-          transliteration: "v'et",
-          translations: [
-            { meaning: "и —", context: "союз + указательная частица", grammar: "союз + частица" },
-            { meaning: "и [знак дополнения]", context: "грамматическая функция" }
-          ]
-        },
-        {
-          hebrew: "הָאָרֶץ",
-          transliteration: "ha-aretz",
-          translations: [
-            { meaning: "землю", context: "планета Земля", grammar: "имя существительное с артиклем" },
-            { meaning: "сушу", context: "твердая поверхность" },
-            { meaning: "страну", context: "территория" }
-          ]
-        }
-      ]
-    },
-    commentaries: [
-      {
-        author: "Раши",
-        text: "В начале творения небес и земли. Если ты пришел объяснить стих в его простом смысле, то следует так: в начале творения небес и земли, когда земля была пуста и необитаема...",
-        category: ""
-      },
-      {
-        author: "Рамбан", 
-        text: "Тора начинается с буквы бет, чтобы указать на благословение. Как сказали наши мудрецы: 'Мир был сотворен заслугой Торы'.",
-        category: ""
-      }
-    ]
-  },
-  Exodus: {
-    hebrew: "שמות",
-    russian: "Шмот",
-    verse: {
-      hebrew: ["וְאֵלֶּה", "שְׁמוֹת", "בְּנֵי", "יִשְׂרָאֵל", "הַבָּאִים", "מִצְרָיְמָה"],
-      russian: "И вот имена сынов Израилевых, пришедших в Египет.",
-      words: [
-        {
-          hebrew: "וְאֵלֶּה",
-          transliteration: "v'eleh",
-          translations: [
-            { meaning: "и вот", context: "указание", grammar: "союз + местоимение" },
-            { meaning: "и эти", context: "перечисление" }
-          ]
-        },
-        {
-          hebrew: "שְׁמוֹת",
-          transliteration: "shmot",
-          translations: [
-            { meaning: "имена", context: "названия", grammar: "имя существительное" },
-            { meaning: "наименования", context: "обозначения" }
-          ]
-        },
-        {
-          hebrew: "בְּנֵי",
-          transliteration: "bnei",
-          translations: [
-            { meaning: "сыновей", context: "потомки", grammar: "имя существительное" },
-            { meaning: "сынов", context: "мужское потомство" }
-          ]
-        },
-        {
-          hebrew: "יִשְׂרָאֵל",
-          transliteration: "Yisrael",
-          translations: [
-            { meaning: "Израиля", context: "праотец Яаков", grammar: "имя собственное" },
-            { meaning: "Израилевых", context: "потомки Яакова" }
-          ]
-        },
-        {
-          hebrew: "הַבָּאִים",
-          transliteration: "ha-baim",
-          translations: [
-            { meaning: "пришедших", context: "прибывших", grammar: "причастие с артиклем" },
-            { meaning: "приходящих", context: "входящих" }
-          ]
-        },
-        {
-          hebrew: "מִצְרָיְמָה",
-          transliteration: "mitzrayma",
-          translations: [
-            { meaning: "в Египет", context: "направление движения", grammar: "имя собственное с окончанием направления" },
-            { meaning: "в землю египетскую", context: "географическое место" }
-          ]
-        }
-      ]
-    },
-    commentaries: [
-      {
-        author: "Раши",
-        text: "И вот имена — хотя уже перечислил их при жизни, вновь перечисляет их после смерти, чтобы показать, насколько они дороги Ему.",
-        category: ""
-      }
-    ]
-  },
-  Leviticus: {
-    hebrew: "ויקרא",
-    russian: "Ваикра",
-    verse: {
-      hebrew: ["וַיִּקְרָא", "אֶל־", "מֹשֶׁה"],
-      russian: "И воззвал к Моисею.",
-      words: [
-        {
-          hebrew: "וַיִּקְרָא",
-          transliteration: "vayikra",
-          translations: [
-            { meaning: "и воззвал", context: "обращение", grammar: "глагол" },
-            { meaning: "и призвал", context: "приглашение" }
-          ]
-        },
-        {
-          hebrew: "אֶל־",
-          transliteration: "el",
-          translations: [
-            { meaning: "к", context: "направление", grammar: "предлог" },
-            { meaning: "в сторону", context: "обращение к кому-то" }
-          ]
-        },
-        {
-          hebrew: "מֹשֶׁה",
-          transliteration: "Moshe",
-          translations: [
-            { meaning: "Моисею", context: "пророк", grammar: "имя собственное" },
-            { meaning: "Моше", context: "еврейское имя" }
-          ]
-        }
-      ]
-    },
-    commentaries: [
-      {
-        author: "Раши",
-        text: "И воззвал — выражение любви, выражение, которым пользуются ангелы служения.",
-        category: ""
-      }
-    ]
-  },
-  Numbers: {
-    hebrew: "במדבר",
-    russian: "Бемидбар",
-    verse: {
-      hebrew: ["וַיְדַבֵּר", "יְהוָה", "אֶל־", "מֹשֶׁה", "בְּמִדְבַּר", "סִינַי"],
-      russian: "И говорил Господь Моисею в пустыне Синайской.",
-      words: [
-        {
-          hebrew: "וַיְדַבֵּר",
-          transliteration: "vayedaber",
-          translations: [
-            { meaning: "и говорил", context: "речь", grammar: "глагол" },
-            { meaning: "и сказал", context: "произнесение" }
-          ]
-        },
-        {
-          hebrew: "יְהוָה",
-          transliteration: "Adonai",
-          translations: [
-            { meaning: "Господь", context: "имя Всевышнего", grammar: "имя собственное" },
-            { meaning: "Всевышний", context: "Творец мира" }
-          ]
-        },
-        {
-          hebrew: "אֶל־",
-          transliteration: "el",
-          translations: [{ meaning: "к", context: "направление", grammar: "предлог" }]
-        },
-        {
-          hebrew: "מֹשֶׁה",
-          transliteration: "Moshe",
-          translations: [{ meaning: "Моисею", context: "пророк", grammar: "имя собственное" }]
-        },
-        {
-          hebrew: "בְּמִדְבַּר",
-          transliteration: "bemidbar",
-          translations: [
-            { meaning: "в пустыне", context: "географическое место", grammar: "предлог + существительное" },
-            { meaning: "в степи", context: "безлюдное место" }
-          ]
-        },
-        {
-          hebrew: "סִינַי",
-          transliteration: "Sinai",
-          translations: [
-            { meaning: "Синайской", context: "гора Синай", grammar: "имя собственное" },
-            { meaning: "Синай", context: "место дарования Торы" }
-          ]
-        }
-      ]
-    },
-    commentaries: [
-      {
-        author: "Раши",
-        text: "В пустыне Синайской — почему здесь упоминается место? Чтобы научить, что слова Торы дороги лишь тому, кто делает себя как пустыня.",
-        category: ""
-      }
-    ]
-  },
-  Deuteronomy: {
-    hebrew: "דברים",
-    russian: "Дварим",
-    verse: {
-      hebrew: ["אֵלֶּה", "הַדְּבָרִים", "אֲשֶׁר", "דִּבֶּר", "מֹשֶׁה"],
-      russian: "Вот слова, которые говорил Моисей.",
-      words: [
-        {
-          hebrew: "אֵלֶּה",
-          transliteration: "eleh",
-          translations: [
-            { meaning: "вот", context: "указание", grammar: "местоимение" },
-            { meaning: "эти", context: "перечисление" }
-          ]
-        },
-        {
-          hebrew: "הַדְּבָרִים",
-          transliteration: "ha-dvarim",
-          translations: [
-            { meaning: "слова", context: "речь", grammar: "существительное с артиклем" },
-            { meaning: "речи", context: "высказывания" }
-          ]
-        },
-        {
-          hebrew: "אֲשֶׁר",
-          transliteration: "asher",
-          translations: [
-            { meaning: "которые", context: "относительное местоимение", grammar: "местоимение" },
-            { meaning: "что", context: "союзное слово" }
-          ]
-        },
-        {
-          hebrew: "דִּבֶּר",
-          transliteration: "diber",
-          translations: [
-            { meaning: "говорил", context: "речь", grammar: "глагол прошедшего времени" },
-            { meaning: "произносил", context: "высказывание" }
-          ]
-        },
-        {
-          hebrew: "מֹשֶׁה",
-          transliteration: "Moshe",
-          translations: [
-            { meaning: "Моисей", context: "пророк", grammar: "имя собственное" },
-            { meaning: "Моше", context: "еврейское имя" }
-          ]
-        }
-      ]
-    },
-    commentaries: [
-      {
-        author: "Раши",
-        text: "Вот слова — слова увещевания. Поскольку это слова увещевания, и здесь перечислены все места, где они прогневили Всемогущего, поэтому завуалировал слова и упомянул их только намеком.",
-        category: ""
-      }
-    ]
-  }
-};
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Loader2, Search, Bookmark, Settings, RefreshCw } from "lucide-react";
+import { useModularTorahData } from "@/hooks/useModularTorahData";
+import { Verse, HebrewWord } from "@/types/torah";
 
 const Index = () => {
-  const [currentBook, setCurrentBook] = useState("Genesis");
-  const [currentChapter, setCurrentChapter] = useState(1);
-  const [currentVerse, setCurrentVerse] = useState(1);
+  const [currentBookId, setCurrentBookId] = useState("genesis");
+  const [currentChapterNum, setCurrentChapterNum] = useState(1);
+  const [currentVerseNum, setCurrentVerseNum] = useState(1);
+  const [currentParashaId, setCurrentParashaId] = useState<string | undefined>(undefined);
   const [activeWordPosition, setActiveWordPosition] = useState<number | null>(null);
+  const [availableChapters, setAvailableChapters] = useState<number[]>([]);
+  const [availableVerses, setAvailableVerses] = useState<number[]>([]);
 
-  // Получаем данные текущей книги
-  const currentBookData = TORAH_DATA[currentBook as keyof typeof TORAH_DATA];
+  // Используем новый модульный хук
+  const { 
+    booksIndex,
+    currentBookMetadata,
+    currentChapter,
+    currentVerseFile, // Новое поле для отдельного стиха
+    currentVerse,
+    currentBookParashas,
+    currentParasha,
+    isLoading,
+    error,
+    progress,
+    navigateToVerse,
+    loadVerse, // Новый метод
+    getAvailableChapters,
+    getAvailableVerses,
+    getBookParashas,
+    clearCache
+  } = useModularTorahData();
 
-  const handleNavigate = (book: string, chapter: number, verse: number) => {
-    setCurrentBook(book);
-    setCurrentChapter(chapter);
-    setCurrentVerse(verse);
+  // Загружаем доступные главы, стихи и парашот при изменении навигации
+  useEffect(() => {
+    const loadNavigation = async () => {
+      if (currentBookId) {
+        // Загружаем парашот для книги
+        const parashas = await getBookParashas(currentBookId);
+        
+        // Если парша не установлена, устанавливаем первую доступную
+        if (!currentParashaId && parashas.length > 0) {
+          setCurrentParashaId(parashas[0].id);
+        }
+        
+        const chapters = await getAvailableChapters(currentBookId);
+        setAvailableChapters(chapters);
+        
+        const verses = await getAvailableVerses(currentBookId, currentChapterNum, currentParashaId);
+        setAvailableVerses(verses);
+      }
+    };
+    
+    loadNavigation();
+  }, [currentBookId, currentChapterNum, currentParashaId, getAvailableChapters, getAvailableVerses, getBookParashas]);
+
+  // Автоматическая навигация к стиху при изменении координат
+  useEffect(() => {
+    console.log('🔄 Navigation changed:', { currentBookId, currentChapterNum, currentVerseNum, currentParashaId });
+    if (currentBookId && currentChapterNum && currentVerseNum) {
+      console.log('📥 Loading verse:', currentBookId, currentChapterNum, currentVerseNum, currentParashaId);
+      navigateToVerse(currentBookId, currentChapterNum, currentVerseNum, currentParashaId);
+    }
+  }, [currentBookId, currentChapterNum, currentVerseNum, currentParashaId, navigateToVerse]);
+
+  // Синхронизация ID парши с загруженной паршей
+  useEffect(() => {
+    if (currentParasha) {
+      setCurrentParashaId(currentParasha.id);
+    }
+  }, [currentParasha]);
+
+  const getCurrentBookMeta = () => {
+    if (currentBookMetadata) {
+      return {
+        hebrew: currentBookMetadata.hebrew,
+        russian: currentBookMetadata.russian,
+        english: currentBookMetadata.english
+      };
+    }
+    
+    // Возвращаем базовую информацию по ID
+    const bookMap: Record<string, { hebrew: string; russian: string; english: string }> = {
+      "genesis": { hebrew: "בראשית", russian: "Берешит", english: "Genesis" },
+      "exodus": { hebrew: "שמות", russian: "Шмот", english: "Exodus" },
+      "leviticus": { hebrew: "ויקרא", russian: "Ваикра", english: "Leviticus" },
+      "numbers": { hebrew: "במדבר", russian: "Бемидбар", english: "Numbers" },
+      "deuteronomy": { hebrew: "דברים", russian: "Дварим", english: "Deuteronomy" }
+    };
+    return bookMap[currentBookId] || { hebrew: "...", russian: "...", english: "..." };
+  };
+
+  const currentBookMeta = getCurrentBookMeta();
+
+
+
+  // УНИВЕРСАЛЬНАЯ функция получения начального стиха для всех 22 пересечений
+  const getInitialVerse = (bookId: string, chapter: number, parasha?: string): number => {
+    if (!parasha) return 1;
+    
+    // Хардкодим известные пересечения для быстрого исправления
+    const knownOverlaps: Record<string, Record<string, number>> = {
+      'genesis': {
+        'noach': chapter === 6 ? 9 : 1, // Ноах 6 начинается с стиха 9
+        'toldot': chapter === 25 ? 19 : 1, // Толдот 25 начинается с стиха 19
+        'vayetzei': chapter === 28 ? 10 : 1, // Ваеце 28 начинается с стиха 10
+        'vayishlach': chapter === 32 ? 4 : 1, // Ваишлах 32 начинается с стиха 4
+        'vayigash': chapter === 44 ? 18 : 1, // Ваигаш 44 начинается с стиха 18
+        'vayechi': chapter === 47 ? 28 : 1, // Ваехи 47 начинается с стиха 28
+      },
+      'exodus': {
+        'vaera': chapter === 6 ? 2 : 1, // Ваера 6 начинается с стиха 2
+        'beshalach': chapter === 13 ? 17 : 1, // Бешалах 13 начинается с стиха 17
+        'tetzaveh': chapter === 27 ? 20 : 1, // Тецаве 27 начинается с стиха 20
+        'ki_tisa': chapter === 30 ? 11 : 1, // Ки тиса 30 начинается с стиха 11
+        'pekudei': chapter === 38 ? 21 : 1, // Пекудей 38 начинается с стиха 21
+      },
+      'leviticus': {
+        'bechukotai': chapter === 26 ? 3 : 1, // Бехукотай 26 начинается с стиха 3
+      },
+      'numbers': {
+        'nasso': chapter === 4 ? 21 : 1, // Насо 4 начинается с стиха 21
+        'balak': chapter === 22 ? 2 : 1, // Балак 22 начинается с стиха 2
+        'pinchas': chapter === 25 ? 10 : 1, // Пинхас 25 начинается с стиха 10
+        'matot': chapter === 30 ? 2 : 1, // Матот 30 начинается с стиха 2
+      },
+      'deuteronomy': {
+        'vaetchanan': chapter === 3 ? 23 : 1, // Ваетханан 3 начинается с стиха 23
+        'eikev': chapter === 7 ? 12 : 1, // Эйкев 7 начинается с стиха 12
+        'reeh': chapter === 11 ? 26 : 1, // Реэ 11 начинается с стиха 26
+        'shoftim': chapter === 16 ? 18 : 1, // Шофтим 16 начинается с стиха 18
+        'ki_teitzei': chapter === 21 ? 10 : 1, // Ки теце 21 начинается с стиха 10
+        'nitzavim': chapter === 29 ? 9 : 1, // Ницавим 29 начинается с стиха 9
+      }
+    };
+    
+    return knownOverlaps[bookId]?.[parasha] || 1;
+  };
+
+  const handleNavigate = async (bookEnglish: string, chapter: number, verse: number, parasha?: string) => {
+    // Конвертируем английское название в ID
+    const bookIdMap: Record<string, string> = {
+      "Genesis": "genesis",
+      "Exodus": "exodus", 
+      "Leviticus": "leviticus",
+      "Numbers": "numbers",
+      "Deuteronomy": "deuteronomy"
+    };
+    
+    const bookId = bookIdMap[bookEnglish] || "genesis";
+    const prevBookId = currentBookId;
+    const prevParashaId = currentParashaId;
+    const prevChapterNum = currentChapterNum;
+    
+    // Логика установки значений по умолчанию
+    if (bookId !== prevBookId) {
+      // При смене книги: сбрасываем на первую паршу, первую главу, первый стих
+      setCurrentBookId(bookId);
+      setCurrentParashaId(undefined); // будет установлена автоматически
+      setCurrentChapterNum(1);
+      setCurrentVerseNum(1);
+    } else if (parasha && parasha !== prevParashaId) {
+      // При смене парши: сбрасываем на первую главу парши, правильный первый стих
+      const initialVerse = await getInitialVerse(bookId, chapter, parasha);
+      setCurrentBookId(bookId);
+      setCurrentParashaId(parasha);
+      setCurrentChapterNum(chapter); // уже первая глава парши
+      setCurrentVerseNum(initialVerse);
+    } else if (chapter !== prevChapterNum) {
+      // При смене главы: сбрасываем на правильный первый стих
+      const initialVerse = getInitialVerse(bookId, chapter, parasha);
+      setCurrentBookId(bookId);
+      setCurrentParashaId(parasha);
+      setCurrentChapterNum(chapter);
+      setCurrentVerseNum(initialVerse);
+    } else {
+      // Обычная навигация - устанавливаем все как есть
+      setCurrentBookId(bookId);
+      setCurrentParashaId(parasha);
+      setCurrentChapterNum(chapter);
+      setCurrentVerseNum(verse);
+    }
+    
     setActiveWordPosition(null);
   };
 
   const handleWordToggle = (position: number) => {
     setActiveWordPosition(activeWordPosition === position ? null : position);
+  };
+
+  const getNavigationChapters = (): number[] => {
+    return availableChapters.length > 0 ? availableChapters : [1];
+  };
+
+  const getNavigationVerses = (): number[] => {
+    return availableVerses.length > 0 ? availableVerses : [1];
   };
 
   return (
@@ -368,20 +236,57 @@ const Index = () => {
 
       <div className="max-w-6xl mx-auto px-4 py-6">
         <TorahNavigation
-          currentBook={currentBook}
-          currentChapter={currentChapter}
-          currentVerse={currentVerse}
+          currentBook={currentBookMeta.english}
+          currentParasha={currentParashaId}
+          currentChapter={currentChapterNum}
+          currentVerse={currentVerseNum}
           onNavigate={handleNavigate}
+          availableParashas={currentBookParashas}
+          availableChapters={availableChapters}
+          availableVerses={availableVerses}
         />
 
-        <div className="grid lg:grid-cols-3 gap-6">
-          {/* Main Text */}
-          <div className="lg:col-span-2">
+        {/* Loading State */}
+        {isLoading && (
+          <Card>
+            <CardContent className="p-8">
+              <div className="flex flex-col items-center gap-4">
+                <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                <div className="text-center">
+                  <p className="text-lg font-medium">{progress.currentOperation}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {progress.loaded} из {progress.total} завершено
+                  </p>
+                  <div className="w-64 bg-gray-200 rounded-full h-2 mt-2">
+                    <div 
+                      className="bg-primary h-2 rounded-full transition-all duration-300" 
+                      style={{ width: `${(progress.loaded / progress.total) * 100}%` }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <Alert variant="destructive">
+            <AlertDescription>
+              Ошибка загрузки данных: {error}
+            </AlertDescription>
+          </Alert>
+        )}
+
+        {/* Main Content - показываем только когда данные загружены */}
+        {!isLoading && (currentVerse || currentVerseFile) && (
+          <div className="space-y-6">
+            {/* Main Text - Full Width */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   <span className="font-elegant text-primary">
-                    {currentBookData.hebrew} {currentChapter}:{currentVerse} • {currentBookData.russian} {currentChapter}:{currentVerse}
+                      {currentBookMeta.hebrew} {currentChapterNum}:{currentVerseNum} • {currentBookMeta.russian} {currentChapterNum}:{currentVerseNum}
                   </span>
                 </CardTitle>
               </CardHeader>
@@ -397,15 +302,16 @@ const Index = () => {
                       </h3>
                       <div className="flex-1 flex items-center justify-center">
                         <div className="text-right leading-loose text-xl" dir="rtl">
-                          {currentBookData.verse.words.map((word, index) => (
+                            {(currentVerseFile?.words || currentVerse?.words || []).map((word, index) => (
                             <TorahWord
-                              key={index}
+                              key={word.position || index}
                               hebrew={word.hebrew}
                               transliteration={word.transliteration}
                               translations={word.translations}
-                              verse={`${currentChapter}:${currentVerse}`}
-                              position={index + 1}
-                              isActive={activeWordPosition === index + 1}
+                              pardes={(word as any).pardes}
+                              verse={`${currentChapterNum}:${currentVerseNum}`}
+                              position={word.position || index + 1}
+                              isActive={activeWordPosition === (word.position || index + 1)}
                               onToggle={handleWordToggle}
                             />
                           ))}
@@ -422,7 +328,8 @@ const Index = () => {
                       </h3>
                       <div className="flex-1 flex items-center justify-center">
                         <p className="font-body text-lg leading-relaxed text-center text-amber-900 dark:text-amber-100">
-                          {currentBookData.verse.russian}
+                          {currentVerseFile?.russian || 
+                           'Русский перевод будет добавлен в ближайшее время'}
                         </p>
                       </div>
                     </div>
@@ -430,18 +337,58 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
 
-          {/* Commentary Sidebar */}
-          <div className="space-y-4">
+            {/* Commentary Section - Full Width Below Main Text */}
             <Commentary
-              verse={`${currentChapter}:${currentVerse}`}
-              bookName={currentBookData.russian}
-              commentaries={currentBookData.commentaries}
-            />
-            
+                verse={`${currentChapterNum}:${currentVerseNum}`}
+                bookName={currentBookMeta.russian}
+                commentaries={(currentVerseFile?.commentaries || currentVerse?.commentaries) ? Object.entries(currentVerseFile?.commentaries || currentVerse?.commentaries || {}).map(([author, text]) => ({
+                  author,
+                  text: text || "",
+                  category: ""
+                })) : []}
+              />
           </div>
-        </div>
+        )}
+
+        {/* Fallback when verse is not found */}
+        {!isLoading && !currentVerse && !currentVerseFile && (
+          <Card>
+            <CardContent className="p-8 text-center">
+              <p className="text-lg text-muted-foreground">
+                Стих {currentChapterNum}:{currentVerseNum} не найден в книге {currentBookMeta.russian}
+              </p>
+              <p className="text-sm text-muted-foreground mt-2">
+                Попробуйте выбрать другой стих или главу
+              </p>
+              <Button 
+                onClick={() => {
+                  // Очистка всех типов кэша
+                  clearCache();
+                  localStorage.clear();
+                  sessionStorage.clear();
+                  
+                  // Принудительная очистка кэша браузера
+                  if ('caches' in window) {
+                    caches.keys().then(function(names) {
+                      names.forEach(function(name) {
+                        caches.delete(name);
+                      });
+                    });
+                  }
+                  
+                  // Перезагрузка с принудительной очисткой кэша
+                  window.location.reload();
+                }} 
+                variant="outline" 
+                className="mt-4"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                🔄 Очистить весь кэш
+              </Button>
+            </CardContent>
+          </Card>
+        )}
       </div>
     </div>
   );

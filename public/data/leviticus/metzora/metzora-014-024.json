@@ -1,0 +1,59 @@
+{
+  "book": "leviticus",
+  "parasha": "metzora",
+  "chapter": 14,
+  "verse": 24,
+  "hebrew": [
+    "[placeholder_word_24_1]",
+    "[placeholder_word_24_2]",
+    "[placeholder_word_24_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_24_1]",
+      "transliteration": "placeholder_24_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 24_1]",
+          "context": "[контекст для слова 24_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_24_2]",
+      "transliteration": "placeholder_24_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 24_2]",
+          "context": "[контекст для слова 24_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_24_3]",
+      "transliteration": "placeholder_24_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 24_3]",
+          "context": "[контекст для слова 24_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 14:24]",
+    "ramban": "[Комментарий Рамбана на стих 14:24]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.541Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

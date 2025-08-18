@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "pinchas",
+  "chapter": 27,
+  "verse": 2,
+  "hebrew": [
+    "[placeholder_word_2_1]",
+    "[placeholder_word_2_2]",
+    "[placeholder_word_2_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_2_1]",
+      "transliteration": "placeholder_2_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 2_1]",
+          "context": "[контекст для слова 2_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_2_2]",
+      "transliteration": "placeholder_2_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 2_2]",
+          "context": "[контекст для слова 2_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_2_3]",
+      "transliteration": "placeholder_2_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 2_3]",
+          "context": "[контекст для слова 2_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 27:2]",
+    "ramban": "[Комментарий Рамбана на стих 27:2]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:57.052Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

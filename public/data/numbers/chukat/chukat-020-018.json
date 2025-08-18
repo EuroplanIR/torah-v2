@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "chukat",
+  "chapter": 20,
+  "verse": 18,
+  "hebrew": [
+    "[placeholder_word_18_1]",
+    "[placeholder_word_18_2]",
+    "[placeholder_word_18_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_18_1]",
+      "transliteration": "placeholder_18_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 18_1]",
+          "context": "[контекст для слова 18_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_18_2]",
+      "transliteration": "placeholder_18_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 18_2]",
+          "context": "[контекст для слова 18_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_18_3]",
+      "transliteration": "placeholder_18_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 18_3]",
+          "context": "[контекст для слова 18_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 20:18]",
+    "ramban": "[Комментарий Рамбана на стих 20:18]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.999Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

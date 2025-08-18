@@ -1,0 +1,59 @@
+{
+  "book": "exodus",
+  "parasha": "mishpatim",
+  "chapter": 21,
+  "verse": 7,
+  "hebrew": [
+    "[placeholder_word_7_1]",
+    "[placeholder_word_7_2]",
+    "[placeholder_word_7_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_7_1]",
+      "transliteration": "placeholder_7_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 7_1]",
+          "context": "[контекст для слова 7_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_7_2]",
+      "transliteration": "placeholder_7_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 7_2]",
+          "context": "[контекст для слова 7_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_7_3]",
+      "transliteration": "placeholder_7_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 7_3]",
+          "context": "[контекст для слова 7_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 21:7]",
+    "ramban": "[Комментарий Рамбана на стих 21:7]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.210Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

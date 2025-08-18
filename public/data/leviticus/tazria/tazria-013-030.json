@@ -1,0 +1,59 @@
+{
+  "book": "leviticus",
+  "parasha": "tazria",
+  "chapter": 13,
+  "verse": 30,
+  "hebrew": [
+    "[placeholder_word_30_1]",
+    "[placeholder_word_30_2]",
+    "[placeholder_word_30_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_30_1]",
+      "transliteration": "placeholder_30_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 30_1]",
+          "context": "[контекст для слова 30_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_30_2]",
+      "transliteration": "placeholder_30_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 30_2]",
+          "context": "[контекст для слова 30_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_30_3]",
+      "transliteration": "placeholder_30_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 30_3]",
+          "context": "[контекст для слова 30_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 13:30]",
+    "ramban": "[Комментарий Рамбана на стих 13:30]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.505Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

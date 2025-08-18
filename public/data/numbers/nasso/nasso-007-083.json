@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "nasso",
+  "chapter": 7,
+  "verse": 83,
+  "hebrew": [
+    "[placeholder_word_83_1]",
+    "[placeholder_word_83_2]",
+    "[placeholder_word_83_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_83_1]",
+      "transliteration": "placeholder_83_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 83_1]",
+          "context": "[контекст для слова 83_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_83_2]",
+      "transliteration": "placeholder_83_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 83_2]",
+          "context": "[контекст для слова 83_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_83_3]",
+      "transliteration": "placeholder_83_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 83_3]",
+          "context": "[контекст для слова 83_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 7:83]",
+    "ramban": "[Комментарий Рамбана на стих 7:83]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.862Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

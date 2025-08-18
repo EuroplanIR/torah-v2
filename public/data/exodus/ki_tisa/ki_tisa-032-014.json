@@ -1,0 +1,59 @@
+{
+  "book": "exodus",
+  "parasha": "ki_tisa",
+  "chapter": 32,
+  "verse": 14,
+  "hebrew": [
+    "[placeholder_word_14_1]",
+    "[placeholder_word_14_2]",
+    "[placeholder_word_14_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_14_1]",
+      "transliteration": "placeholder_14_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 14_1]",
+          "context": "[контекст для слова 14_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_14_2]",
+      "transliteration": "placeholder_14_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 14_2]",
+          "context": "[контекст для слова 14_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_14_3]",
+      "transliteration": "placeholder_14_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 14_3]",
+          "context": "[контекст для слова 14_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 32:14]",
+    "ramban": "[Комментарий Рамбана на стих 32:14]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.331Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

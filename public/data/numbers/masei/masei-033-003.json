@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "masei",
+  "chapter": 33,
+  "verse": 3,
+  "hebrew": [
+    "[placeholder_word_3_1]",
+    "[placeholder_word_3_2]",
+    "[placeholder_word_3_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_3_1]",
+      "transliteration": "placeholder_3_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 3_1]",
+          "context": "[контекст для слова 3_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_3_2]",
+      "transliteration": "placeholder_3_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 3_2]",
+          "context": "[контекст для слова 3_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_3_3]",
+      "transliteration": "placeholder_3_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 3_3]",
+          "context": "[контекст для слова 3_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 33:3]",
+    "ramban": "[Комментарий Рамбана на стих 33:3]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:57.110Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

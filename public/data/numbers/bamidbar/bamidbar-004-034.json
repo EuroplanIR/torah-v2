@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "bamidbar",
+  "chapter": 4,
+  "verse": 34,
+  "hebrew": [
+    "[placeholder_word_34_1]",
+    "[placeholder_word_34_2]",
+    "[placeholder_word_34_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_34_1]",
+      "transliteration": "placeholder_34_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 34_1]",
+          "context": "[контекст для слова 34_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_34_2]",
+      "transliteration": "placeholder_34_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 34_2]",
+          "context": "[контекст для слова 34_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_34_3]",
+      "transliteration": "placeholder_34_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 34_3]",
+          "context": "[контекст для слова 34_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 4:34]",
+    "ramban": "[Комментарий Рамбана на стих 4:34]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.783Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "book": "leviticus",
+  "parasha": "emor",
+  "chapter": 23,
+  "verse": 1,
+  "hebrew": [
+    "[placeholder_word_1_1]",
+    "[placeholder_word_1_2]",
+    "[placeholder_word_1_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_1_1]",
+      "transliteration": "placeholder_1_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 1_1]",
+          "context": "[контекст для слова 1_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_1_2]",
+      "transliteration": "placeholder_1_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 1_2]",
+          "context": "[контекст для слова 1_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_1_3]",
+      "transliteration": "placeholder_1_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 1_3]",
+          "context": "[контекст для слова 1_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 23:1]",
+    "ramban": "[Комментарий Рамбана на стих 23:1]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.646Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

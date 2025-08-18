@@ -1,0 +1,59 @@
+{
+  "book": "leviticus",
+  "parasha": "emor",
+  "chapter": 21,
+  "verse": 16,
+  "hebrew": [
+    "[placeholder_word_16_1]",
+    "[placeholder_word_16_2]",
+    "[placeholder_word_16_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_16_1]",
+      "transliteration": "placeholder_16_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 16_1]",
+          "context": "[контекст для слова 16_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_16_2]",
+      "transliteration": "placeholder_16_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 16_2]",
+          "context": "[контекст для слова 16_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_16_3]",
+      "transliteration": "placeholder_16_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 16_3]",
+          "context": "[контекст для слова 16_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 21:16]",
+    "ramban": "[Комментарий Рамбана на стих 21:16]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.637Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

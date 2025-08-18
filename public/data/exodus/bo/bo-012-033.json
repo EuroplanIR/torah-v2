@@ -1,0 +1,59 @@
+{
+  "book": "exodus",
+  "parasha": "bo",
+  "chapter": 12,
+  "verse": 33,
+  "hebrew": [
+    "[placeholder_word_33_1]",
+    "[placeholder_word_33_2]",
+    "[placeholder_word_33_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_33_1]",
+      "transliteration": "placeholder_33_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 33_1]",
+          "context": "[контекст для слова 33_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_33_2]",
+      "transliteration": "placeholder_33_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 33_2]",
+          "context": "[контекст для слова 33_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_33_3]",
+      "transliteration": "placeholder_33_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 33_3]",
+          "context": "[контекст для слова 33_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 12:33]",
+    "ramban": "[Комментарий Рамбана на стих 12:33]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.098Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

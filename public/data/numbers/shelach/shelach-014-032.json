@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "shelach",
+  "chapter": 14,
+  "verse": 32,
+  "hebrew": [
+    "[placeholder_word_32_1]",
+    "[placeholder_word_32_2]",
+    "[placeholder_word_32_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_32_1]",
+      "transliteration": "placeholder_32_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 32_1]",
+          "context": "[контекст для слова 32_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_32_2]",
+      "transliteration": "placeholder_32_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 32_2]",
+          "context": "[контекст для слова 32_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_32_3]",
+      "transliteration": "placeholder_32_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 32_3]",
+          "context": "[контекст для слова 32_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 14:32]",
+    "ramban": "[Комментарий Рамбана на стих 14:32]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.942Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

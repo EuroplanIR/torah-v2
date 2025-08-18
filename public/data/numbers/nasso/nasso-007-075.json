@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "nasso",
+  "chapter": 7,
+  "verse": 75,
+  "hebrew": [
+    "[placeholder_word_75_1]",
+    "[placeholder_word_75_2]",
+    "[placeholder_word_75_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_75_1]",
+      "transliteration": "placeholder_75_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 75_1]",
+          "context": "[контекст для слова 75_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_75_2]",
+      "transliteration": "placeholder_75_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 75_2]",
+          "context": "[контекст для слова 75_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_75_3]",
+      "transliteration": "placeholder_75_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 75_3]",
+          "context": "[контекст для слова 75_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 7:75]",
+    "ramban": "[Комментарий Рамбана на стих 7:75]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.860Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

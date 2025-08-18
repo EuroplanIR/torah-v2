@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "pinchas",
+  "chapter": 29,
+  "verse": 6,
+  "hebrew": [
+    "[placeholder_word_6_1]",
+    "[placeholder_word_6_2]",
+    "[placeholder_word_6_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_6_1]",
+      "transliteration": "placeholder_6_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 6_1]",
+          "context": "[контекст для слова 6_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_6_2]",
+      "transliteration": "placeholder_6_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 6_2]",
+          "context": "[контекст для слова 6_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_6_3]",
+      "transliteration": "placeholder_6_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 6_3]",
+          "context": "[контекст для слова 6_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 29:6]",
+    "ramban": "[Комментарий Рамбана на стих 29:6]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:57.064Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

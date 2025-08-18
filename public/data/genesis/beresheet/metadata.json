@@ -1,0 +1,15 @@
+{
+  "id": "beresheet",
+  "availableChapters": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "totalChapters": 6,
+  "totalVerses": 146,
+  "lastUpdated": "2025-08-04T20:47:55.854Z",
+  "dataVersion": "3.0.0"
+}

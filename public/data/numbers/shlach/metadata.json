@@ -1,0 +1,31 @@
+{
+  "id": "shlach",
+  "bookId": "numbers",
+  "number": 37,
+  "names": {
+    "hebrew": "שלח",
+    "russian": "Шлах",
+    "english": "Sh'lach"
+  },
+  "structure": {
+    "startChapter": 13,
+    "endChapter": 15,
+    "startVerse": 1,
+    "endVerse": 41
+  },
+  "content": {
+    "theme": "Разведчики",
+    "description": "Разведка земли обетованной, дурные вести, сорок лет в пустыне."
+  },
+  "chapters": [
+    13,
+    14,
+    15
+  ],
+  "totalVerses": 119,
+  "availableChapters": [
+    13,
+    14,
+    15
+  ]
+}

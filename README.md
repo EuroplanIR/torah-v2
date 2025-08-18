@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
+# Torah v2.0 📖
 
-## Project info
+Современное веб-приложение для изучения Торы с комментариями на русском языке.
 
-**URL**: https://lovable.dev/projects/f054b82c-6439-4025-ac5a-6078ac6474ba
+## 🌟 Особенности
 
-## How can I edit this code?
+- **Полный текст Торы** на иврите с переводом
+- **Богатые комментарии** от классических и современных авторов
+- **Удобная навигация** по книгам, главам и стихам
+- **Адаптивный дизайн** для всех устройств
+- **Быстрый поиск** по тексту и комментариям
 
-There are several ways of editing your application.
+## 🚀 Технологии
 
-**Use Lovable**
+- **React 18** + TypeScript
+- **Vite** для быстрой разработки
+- **Tailwind CSS** + **shadcn/ui** для стилизации
+- **React Router** для навигации
+- **Tanstack Query** для работы с данными
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f054b82c-6439-4025-ac5a-6078ac6474ba) and start prompting.
+## 📱 Демо
 
-Changes made via Lovable will be committed automatically to this repo.
+🔗 **[Перейти к приложению](https://your-username.github.io/torah-v2)**
 
-**Use your preferred IDE**
+## 🛠 Установка и запуск
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+# Клонирование репозитория
+git clone https://github.com/your-username/torah-v2.git
+cd torah-v2
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Установка зависимостей
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Запуск в режиме разработки
 npm run dev
+
+# Сборка для продакшена
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## 📚 Структура данных
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Приложение использует структурированные JSON файлы с:
+- Текстом на иврите
+- Переводами на русский
+- Комментариями различных авторов
+- Метаданными о книгах и главах
 
-**Use GitHub Codespaces**
+## 🤝 Участие в проекте
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Мы приветствуем вклад в развитие проекта! Пожалуйста:
 
-## What technologies are used for this project?
+1. Сделайте fork репозитория
+2. Создайте ветку для вашей функции
+3. Внесите изменения
+4. Создайте Pull Request
 
-This project is built with:
+## 📄 Лицензия
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Этот проект создан для изучения и распространения знаний Торы.
 
-## How can I deploy this project?
+## 📞 Контакты
 
-Simply open [Lovable](https://lovable.dev/projects/f054b82c-6439-4025-ac5a-6078ac6474ba) and click on Share -> Publish.
+Если у вас есть вопросы или предложения, создайте Issue в репозитории.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**Torah v2.0** - современный способ изучения древней мудрости 🕊️

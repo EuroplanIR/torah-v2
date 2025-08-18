@@ -1,0 +1,20 @@
+{
+  "book": "genesis",
+  "english": "Genesis",
+  "hebrew": "בראשית", 
+  "russian": "Берешит",
+  "transliteration": "Bereishit",
+  "description": "Первая книга Торы, рассказывающая о сотворении мира, первых людях и патриархах",
+  "totalChapters": 50,
+  "totalVerses": 1533,
+  "chapters": [
+    {"number": 1, "verses": 31, "title": "Сотворение мира", "theme": "Шесть дней творения"},
+    {"number": 2, "verses": 25, "title": "Человек в Эдемском саду", "theme": "Создание человека"},
+    {"number": 3, "verses": 24, "title": "Грехопадение", "theme": "Нарушение заповеди"},
+    {"number": 4, "verses": 26, "title": "Каин и Авель", "theme": "Первое убийство"},
+    {"number": 5, "verses": 32, "title": "Родословие от Адама", "theme": "Поколения до потопа"}
+  ],
+  "availableChapters": [1, 2, 3],
+  "lastUpdated": "2024-01-15T10:30:00Z",
+  "dataVersion": "1.0.0"
+}

@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "shelach",
+  "chapter": 14,
+  "verse": 21,
+  "hebrew": [
+    "[placeholder_word_21_1]",
+    "[placeholder_word_21_2]",
+    "[placeholder_word_21_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_21_1]",
+      "transliteration": "placeholder_21_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 21_1]",
+          "context": "[контекст для слова 21_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_21_2]",
+      "transliteration": "placeholder_21_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 21_2]",
+          "context": "[контекст для слова 21_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_21_3]",
+      "transliteration": "placeholder_21_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 21_3]",
+          "context": "[контекст для слова 21_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 14:21]",
+    "ramban": "[Комментарий Рамбана на стих 14:21]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.940Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

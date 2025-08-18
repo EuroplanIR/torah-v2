@@ -1,0 +1,54 @@
+{
+  "commentators": [
+    {
+      "id": "rashi",
+      "name": "Раши",
+      "hebrewName": "רש\"י",
+      "fullName": "Рабби Шломо Ицхаки",
+      "years": "1040-1105",
+      "description": "Величайший комментатор Торы и Талмуда, объясняющий простой смысл текста",
+      "style": "peshat",
+      "language": "hebrew"
+    },
+    {
+      "id": "ramban",
+      "name": "Рамбан", 
+      "hebrewName": "רמב\"ן",
+      "fullName": "Рабби Моше бен Нахман",
+      "years": "1194-1270",
+      "description": "Каббалист и комментатор, сочетающий простой и скрытый смысл",
+      "style": "peshat-remez",
+      "language": "hebrew"
+    },
+    {
+      "id": "ibn_ezra",
+      "name": "Ибн Эзра",
+      "hebrewName": "אבן עזרא", 
+      "fullName": "Рабби Авраам Ибн Эзра",
+      "years": "1089-1167",
+      "description": "Грамматик и философ, точный анализ текста",
+      "style": "peshat-grammar",
+      "language": "hebrew"
+    },
+    {
+      "id": "sforno",
+      "name": "Сфорно",
+      "hebrewName": "ספורנו",
+      "fullName": "Рабби Овадья Сфорно", 
+      "years": "1475-1550",
+      "description": "Итальянский комментатор эпохи Возрождения",
+      "style": "peshat-philosophy",
+      "language": "hebrew"
+    },
+    {
+      "id": "kli_yakar",
+      "name": "Кли Якар",
+      "hebrewName": "כלי יקר",
+      "fullName": "Рабби Шломо Эфраим Лунчиц",
+      "years": "1550-1619",
+      "description": "Моралист и проповедник, извлекающий этические уроки",
+      "style": "drash-ethics", 
+      "language": "hebrew"
+    }
+  ]
+}

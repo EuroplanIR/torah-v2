@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "nasso",
+  "chapter": 7,
+  "verse": 65,
+  "hebrew": [
+    "[placeholder_word_65_1]",
+    "[placeholder_word_65_2]",
+    "[placeholder_word_65_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_65_1]",
+      "transliteration": "placeholder_65_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 65_1]",
+          "context": "[контекст для слова 65_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_65_2]",
+      "transliteration": "placeholder_65_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 65_2]",
+          "context": "[контекст для слова 65_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_65_3]",
+      "transliteration": "placeholder_65_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 65_3]",
+          "context": "[контекст для слова 65_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 7:65]",
+    "ramban": "[Комментарий Рамбана на стих 7:65]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.857Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

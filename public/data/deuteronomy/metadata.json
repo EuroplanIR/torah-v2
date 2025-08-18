@@ -1,0 +1,19 @@
+{
+  "book": "deuteronomy",
+  "english": "Deuteronomy",
+  "hebrew": "דברים",
+  "russian": "Дварим",
+  "transliteration": "Devarim",
+  "description": "Пятая книга Торы, последние речи Моисея перед входом народа в Землю Обетованную",
+  "totalChapters": 34,
+  "totalVerses": 959,
+  "chapters": [
+    {"number": 1, "verses": 46, "title": "Воспоминания о пути", "theme": "История странствий"},
+    {"number": 2, "verses": 37, "title": "Завоевания", "theme": "Победы народа"},
+    {"number": 3, "verses": 29, "title": "Разделение земли", "theme": "Наследование"},
+    {"number": 4, "verses": 49, "title": "Призыв к верности", "theme": "Соблюдение заповедей"}
+  ],
+  "availableChapters": [1],
+  "lastUpdated": "2024-01-15T10:30:00Z",
+  "dataVersion": "1.0.0"
+}

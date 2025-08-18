@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "nasso",
+  "chapter": 7,
+  "verse": 82,
+  "hebrew": [
+    "[placeholder_word_82_1]",
+    "[placeholder_word_82_2]",
+    "[placeholder_word_82_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_82_1]",
+      "transliteration": "placeholder_82_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 82_1]",
+          "context": "[контекст для слова 82_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_82_2]",
+      "transliteration": "placeholder_82_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 82_2]",
+          "context": "[контекст для слова 82_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_82_3]",
+      "transliteration": "placeholder_82_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 82_3]",
+          "context": "[контекст для слова 82_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 7:82]",
+    "ramban": "[Комментарий Рамбана на стих 7:82]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.861Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

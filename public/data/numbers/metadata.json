@@ -1,0 +1,19 @@
+{
+  "book": "numbers",
+  "english": "Numbers",
+  "hebrew": "במדבר",
+  "russian": "Бемидбар",
+  "transliteration": "Bemidbar",
+  "description": "Четвертая книга Торы о странствии в пустыне, переписи народа и подготовке к вхождению в Землю",
+  "totalChapters": 36,
+  "totalVerses": 1288,
+  "chapters": [
+    {"number": 1, "verses": 54, "title": "Перепись народа", "theme": "Подсчет колен"},
+    {"number": 2, "verses": 34, "title": "Расположение станов", "theme": "Порядок в стане"},
+    {"number": 3, "verses": 51, "title": "Левиты", "theme": "Служители Храма"},
+    {"number": 4, "verses": 49, "title": "Служение левитов", "theme": "Обязанности в Мишкане"}
+  ],
+  "availableChapters": [1],
+  "lastUpdated": "2024-01-15T10:30:00Z",
+  "dataVersion": "1.0.0"
+}

@@ -1,0 +1,372 @@
+import { useState, useEffect, useRef } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { BookOpen, Type, MessageCircle, Sparkles, Star, Scroll, Library, Eye } from "lucide-react";
+
+interface Translation {
+  meaning: string;
+  context?: string;
+  grammar?: string;
+  sources?: string[];
+}
+
+interface PardesLevel {
+  meaning: string;
+  context: string;
+  explanation?: string;
+  gematria?: string;
+  sefirot?: string;
+  source?: string;
+  sources?: string[];
+}
+
+interface PardesData {
+  pshat?: PardesLevel | PardesLevel[]; // Поддержка одного объекта или массива
+  remez?: PardesLevel | PardesLevel[]; // Поддержка одного объекта или массива
+  drash?: PardesLevel[];
+  sod?: PardesLevel | PardesLevel[]; // Поддержка одного объекта или массива
+}
+
+interface TorahWordProps {
+  hebrew: string;
+  transliteration: string;
+  translations: Translation[];
+  pardes?: PardesData;
+  verse: string;
+  position: number;
+  isActive: boolean;
+  onToggle: (position: number) => void;
+}
+
+export const TorahWord = ({ hebrew, transliteration, translations, pardes, verse, position, isActive, onToggle }: TorahWordProps) => {
+  const [popupStyle, setPopupStyle] = useState({});
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (isActive && buttonRef.current) {
+      const rect = buttonRef.current.getBoundingClientRect();
+      const viewportWidth = window.innerWidth;
+      const popupWidth = 800; // Увеличиваем ширину для нового макета
+      const margin = 16; // 1rem margin
+      
+      let newStyle = {};
+      
+      // Mobile: full width with margins
+      if (viewportWidth < 768) {
+        newStyle = { 
+          left: `${margin}px`, 
+          right: `${margin}px`, 
+          width: 'auto',
+          transform: 'none'
+        };
+      }
+      // Check if popup would overflow left edge
+      else if (rect.left < popupWidth/2 + margin) {
+        newStyle = { 
+          left: `${margin}px`,
+          transform: 'none'
+        };
+      }
+      // Check if popup would overflow right edge
+      else if (rect.right > viewportWidth - popupWidth/2 - margin) {
+        newStyle = { 
+          right: `${margin}px`,
+          transform: 'none'
+        };
+      }
+      // Center positioning (default)
+      else {
+        newStyle = {
+          left: '50%',
+          transform: 'translateX(-50%)'
+        };
+      }
+      
+      setPopupStyle(newStyle);
+    }
+  }, [isActive]);
+
+  return (
+    <div className="relative inline-block mx-1">
+      <button
+        ref={buttonRef}
+        onClick={() => onToggle(position)}
+        className={`font-hebrew text-hebrew text-yellow-500 dark:text-yellow-400 hover:bg-gradient-to-r hover:from-accent/20 hover:to-primary/20 rounded-lg px-2 py-1 mx-0.5 transition-all duration-300 cursor-pointer border-2 relative group transform hover:scale-110 font-bold drop-shadow-sm ${
+          isActive 
+            ? 'border-primary bg-gradient-to-r from-primary/10 to-accent/10 shadow-lg scale-105 text-yellow-400 dark:text-yellow-300' 
+            : 'border-transparent hover:border-accent/50'
+        }`}
+      >
+        {hebrew}
+        {/* Enhanced tooltip */}
+        <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary to-accent text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-lg">
+          <Sparkles className="w-3 h-3 inline mr-1" />
+          Нажмите для перевода
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-accent"></div>
+        </span>
+      </button>
+      
+      {isActive && (
+        <div 
+          className="absolute top-full mt-4 z-50 w-[800px] max-w-[95vw]"
+          style={popupStyle}
+        >
+          <Card className="shadow-2xl border-0 bg-background backdrop-blur-sm animate-scale-in overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5"></div>
+            <CardContent className="relative p-6">
+              <div className="space-y-6">
+                {/* Header Section */}
+                <div className="text-center pb-4 relative">
+                  <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
+                  <div className="relative">
+                    <div className="font-hebrew text-4xl text-primary mb-3 drop-shadow-sm">{hebrew}</div>
+                    <div className="absolute -top-1 -right-1">
+                      <Badge variant="outline" className="text-xs bg-primary/10 border-primary/30 shadow-sm">
+                        <BookOpen className="w-3 h-3 mr-1" />
+                        {position}
+                      </Badge>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-center gap-2 text-2xl text-muted-foreground italic mb-3">
+                    <Type className="w-4 h-4" />
+                    {transliteration}
+                  </div>
+                  <Badge variant="secondary" className="text-xs bg-accent/20 text-accent-foreground shadow-sm">
+                    Стих {verse}
+                  </Badge>
+                </div>
+                
+                {/* Translations Section */}
+                <div className="space-y-4">
+                  {/* ПаРДеС отображение */}
+                  {pardes ? (
+                    <div className="space-y-3">
+                      {/* Пшат */}
+                      {pardes.pshat && (
+                        Array.isArray(pardes.pshat) ? (
+                          // Множественные буквальные смыслы
+                          pardes.pshat.map((pshat, idx) => (
+                            <div key={idx} className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                              <div className="flex items-center gap-2 mb-2">
+                                <Badge className="bg-blue-100 text-blue-800 text-xs">פשט</Badge>
+                                <span className="text-xs text-blue-600">Буквальный смысл</span>
+                                {pshat.source && <span className="text-xs text-blue-500">({pshat.source})</span>}
+                              </div>
+                              <div className="font-semibold text-blue-900">{pshat.meaning}</div>
+                              <div className="text-sm text-blue-700 mt-1" dir="ltr">{pshat.context}</div>
+                              {pshat.explanation && (
+                                <div className="text-xs text-blue-600 mt-2" dir="ltr">{pshat.explanation}</div>
+                              )}
+                            </div>
+                          ))
+                        ) : (
+                          // Одиночный буквальный смысл
+                          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                            <div className="flex items-center gap-2 mb-2">
+                              <Badge className="bg-blue-100 text-blue-800 text-xs">פשט</Badge>
+                              <span className="text-xs text-blue-600">Буквальный смысл</span>
+                              {pardes.pshat.source && <span className="text-xs text-blue-500">({pardes.pshat.source})</span>}
+                            </div>
+                            <div className="font-semibold text-blue-900">{pardes.pshat.meaning}</div>
+                            <div className="text-sm text-blue-700 mt-1" dir="ltr">{pardes.pshat.context}</div>
+                            {pardes.pshat.explanation && (
+                              <div className="text-xs text-blue-600 mt-2" dir="ltr">{pardes.pshat.explanation}</div>
+                            )}
+                          </div>
+                        )
+                      )}
+
+                      {/* Ремез */}
+                      {pardes.remez && (
+                        Array.isArray(pardes.remez) ? (
+                          // Множественные намёки
+                          pardes.remez.map((remez, idx) => (
+                            <div key={idx} className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+                              <div className="flex items-center gap-2 mb-2">
+                                <Badge className="bg-green-100 text-green-800 text-xs">רמז</Badge>
+                                <span className="text-xs text-green-600">Намёк</span>
+                                {remez.source && <span className="text-xs text-green-500">({remez.source})</span>}
+                              </div>
+                              <div className="font-semibold text-green-900">{remez.meaning}</div>
+                              <div className="text-sm text-green-700 mt-1" dir="ltr">{remez.context}</div>
+                              {remez.explanation && (
+                                <div className="text-xs text-green-600 mt-2" dir="ltr">{remez.explanation}</div>
+                              )}
+                              {remez.gematria && (
+                                <div className="text-xs text-green-600 mt-2 font-mono">{remez.gematria}</div>
+                              )}
+                              {remez.sources && remez.sources.length > 0 && (
+                                <div className="flex gap-1 mt-2">
+                                  {remez.sources.map((source, sidx) => (
+                                    <Badge key={sidx} variant="outline" className="text-xs bg-green-100 text-green-700">
+                                      {source}
+                                    </Badge>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ))
+                        ) : (
+                          // Одиночный намёк
+                          <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+                            <div className="flex items-center gap-2 mb-2">
+                              <Badge className="bg-green-100 text-green-800 text-xs">רמז</Badge>
+                              <span className="text-xs text-green-600">Намёк</span>
+                              {pardes.remez.source && <span className="text-xs text-green-500">({pardes.remez.source})</span>}
+                            </div>
+                            <div className="font-semibold text-green-900">{pardes.remez.meaning}</div>
+                            <div className="text-sm text-green-700 mt-1" dir="ltr">{pardes.remez.context}</div>
+                            {pardes.remez.explanation && (
+                              <div className="text-xs text-green-600 mt-2" dir="ltr">{pardes.remez.explanation}</div>
+                            )}
+                            {pardes.remez.gematria && (
+                              <div className="text-xs text-green-600 mt-2 font-mono">{pardes.remez.gematria}</div>
+                            )}
+                            {pardes.remez.sources && pardes.remez.sources.length > 0 && (
+                              <div className="flex gap-1 mt-2">
+                                {pardes.remez.sources.map((source, sidx) => (
+                                  <Badge key={sidx} variant="outline" className="text-xs bg-green-100 text-green-700">
+                                    {source}
+                                  </Badge>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        )
+                      )}
+
+                      {/* Драш */}
+                      {pardes.drash && pardes.drash.map((drash, idx) => (
+                        <div key={idx} className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Badge className="bg-orange-100 text-orange-800 text-xs">דרש</Badge>
+                            <span className="text-xs text-orange-600">Толкование</span>
+                            {drash.source && <span className="text-xs text-orange-500">({drash.source})</span>}
+                          </div>
+                          <div className="font-semibold text-orange-900">{drash.meaning}</div>
+                          <div className="text-sm text-orange-700 mt-1" dir="ltr">{drash.context}</div>
+                          {drash.explanation && (
+                            <div className="text-xs text-orange-600 mt-2" dir="ltr">{drash.explanation}</div>
+                          )}
+                        </div>
+                      ))}
+
+                      {/* Сод */}
+                      {pardes.sod && (
+                        Array.isArray(pardes.sod) ? (
+                          // Множественные тайные смыслы
+                          pardes.sod.map((sod, idx) => (
+                            <div key={idx} className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400">
+                              <div className="flex items-center gap-2 mb-2">
+                                <Badge className="bg-purple-100 text-purple-800 text-xs">סוד</Badge>
+                                <span className="text-xs text-purple-600">Тайный смысл</span>
+                                {sod.source && <span className="text-xs text-purple-500">({sod.source})</span>}
+                              </div>
+                              <div className="font-semibold text-purple-900">{sod.meaning}</div>
+                              <div className="text-sm text-purple-700 mt-1" dir="ltr">{sod.context}</div>
+                              {sod.explanation && (
+                                <div className="text-xs text-purple-600 mt-2" dir="ltr">{sod.explanation}</div>
+                              )}
+                              {sod.sefirot && (
+                                <div className="text-xs text-purple-600 mt-2" dir="ltr">Сфира: {sod.sefirot}</div>
+                              )}
+                              {sod.sources && sod.sources.length > 0 && (
+                                <div className="flex gap-1 mt-2">
+                                  {sod.sources.map((source, sidx) => (
+                                    <Badge key={sidx} variant="outline" className="text-xs bg-purple-100 text-purple-700">
+                                      {source}
+                                    </Badge>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ))
+                        ) : (
+                          // Одиночный тайный смысл
+                          <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400">
+                            <div className="flex items-center gap-2 mb-2">
+                              <Badge className="bg-purple-100 text-purple-800 text-xs">סוד</Badge>
+                              <span className="text-xs text-purple-600">Тайный смысл</span>
+                              {pardes.sod.source && <span className="text-xs text-purple-500">({pardes.sod.source})</span>}
+                            </div>
+                            <div className="font-semibold text-purple-900">{pardes.sod.meaning}</div>
+                            <div className="text-sm text-purple-700 mt-1" dir="ltr">{pardes.sod.context}</div>
+                            {pardes.sod.explanation && (
+                              <div className="text-xs text-purple-600 mt-2" dir="ltr">{pardes.sod.explanation}</div>
+                            )}
+                            {pardes.sod.sefirot && (
+                              <div className="text-xs text-purple-600 mt-2" dir="ltr">Сфира: {pardes.sod.sefirot}</div>
+                            )}
+                            {pardes.sod.sources && pardes.sod.sources.length > 0 && (
+                              <div className="flex gap-1 mt-2">
+                                {pardes.sod.sources.map((source, sidx) => (
+                                  <Badge key={sidx} variant="outline" className="text-xs bg-purple-100 text-purple-700">
+                                    {source}
+                                  </Badge>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        )
+                      )}
+                    </div>
+                  ) : (
+                    /* Обычные переводы */
+                    translations.map((translation, index) => (
+                      <div 
+                        key={index} 
+                        className="group relative rounded-xl bg-gradient-to-r from-card/60 to-accent/10 border border-accent/20 p-5 hover:from-accent/15 hover:to-primary/10 hover:border-accent/40 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+                      >
+                        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-primary to-accent rounded-l-xl opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                        
+                        <div className="pl-4">
+                          <div className="font-semibold text-foreground text-lg mb-3 group-hover:text-primary transition-colors leading-relaxed">
+                            {translation.meaning}
+                          </div>
+                          
+                          <div className="flex flex-wrap gap-2">
+                            {translation.context && (
+                              <Badge variant="outline" className="text-xs bg-muted/60 text-muted-foreground border-muted-foreground/30 hover:bg-muted/80 transition-colors">
+                                <MessageCircle className="w-3 h-3 mr-1" />
+                                {translation.context}
+                              </Badge>
+                            )}
+                            {translation.grammar && (
+                              <Badge variant="outline" className="text-xs bg-accent/15 text-accent-foreground border-accent/40 hover:bg-accent/25 transition-colors">
+                                <Type className="w-3 h-3 mr-1" />
+                                {translation.grammar}
+                              </Badge>
+                            )}
+                            {translation.sources && translation.sources.length > 0 && (
+                              <div className="flex gap-1 mt-2">
+                                {translation.sources.map((source, sidx) => (
+                                  <Badge key={sidx} variant="outline" className="text-xs">
+                                    {source}
+                                  </Badge>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+                
+                {/* Close hint */}
+                <div className="text-center pt-3 relative">
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"></div>
+                  <p className="text-xs text-muted-foreground opacity-70 mt-3">
+                    Нажмите на слово еще раз, чтобы закрыть
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+    </div>
+  );
+};

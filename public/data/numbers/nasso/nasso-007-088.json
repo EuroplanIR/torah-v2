@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "nasso",
+  "chapter": 7,
+  "verse": 88,
+  "hebrew": [
+    "[placeholder_word_88_1]",
+    "[placeholder_word_88_2]",
+    "[placeholder_word_88_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_88_1]",
+      "transliteration": "placeholder_88_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 88_1]",
+          "context": "[контекст для слова 88_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_88_2]",
+      "transliteration": "placeholder_88_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 88_2]",
+          "context": "[контекст для слова 88_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_88_3]",
+      "transliteration": "placeholder_88_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 88_3]",
+          "context": "[контекст для слова 88_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 7:88]",
+    "ramban": "[Комментарий Рамбана на стих 7:88]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.878Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

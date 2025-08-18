@@ -1,0 +1,59 @@
+{
+  "book": "deuteronomy",
+  "parasha": "ki_tavo",
+  "chapter": 27,
+  "verse": 9,
+  "hebrew": [
+    "[placeholder_word_9_1]",
+    "[placeholder_word_9_2]",
+    "[placeholder_word_9_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_9_1]",
+      "transliteration": "placeholder_9_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 9_1]",
+          "context": "[контекст для слова 9_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_9_2]",
+      "transliteration": "placeholder_9_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 9_2]",
+          "context": "[контекст для слова 9_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_9_3]",
+      "transliteration": "placeholder_9_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 9_3]",
+          "context": "[контекст для слова 9_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 27:9]",
+    "ramban": "[Комментарий Рамбана на стих 27:9]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:57.325Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

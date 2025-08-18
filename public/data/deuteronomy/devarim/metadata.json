@@ -1,0 +1,12 @@
+{
+  "id": "devarim",
+  "availableChapters": [
+    1,
+    2,
+    3
+  ],
+  "totalChapters": 3,
+  "totalVerses": 112,
+  "lastUpdated": "2025-08-04T20:47:57.138Z",
+  "dataVersion": "3.0.0"
+}

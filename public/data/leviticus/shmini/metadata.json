@@ -1,0 +1,31 @@
+{
+  "id": "shmini",
+  "bookId": "leviticus",
+  "number": 26,
+  "names": {
+    "hebrew": "שמיני",
+    "russian": "Шмини",
+    "english": "Shmini"
+  },
+  "structure": {
+    "startChapter": 9,
+    "endChapter": 11,
+    "startVerse": 1,
+    "endVerse": 47
+  },
+  "content": {
+    "theme": "Начало служения и законы кашрута",
+    "description": "Первое служение Аарона, смерть Надава и Авиху, законы о чистых и нечистых животных."
+  },
+  "chapters": [
+    9,
+    10,
+    11
+  ],
+  "totalVerses": 91,
+  "availableChapters": [
+    9,
+    10,
+    11
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "book": "leviticus",
+  "parasha": "tazria",
+  "chapter": 13,
+  "verse": 48,
+  "hebrew": [
+    "[placeholder_word_48_1]",
+    "[placeholder_word_48_2]",
+    "[placeholder_word_48_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_48_1]",
+      "transliteration": "placeholder_48_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 48_1]",
+          "context": "[контекст для слова 48_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_48_2]",
+      "transliteration": "placeholder_48_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 48_2]",
+          "context": "[контекст для слова 48_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_48_3]",
+      "transliteration": "placeholder_48_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 48_3]",
+          "context": "[контекст для слова 48_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 13:48]",
+    "ramban": "[Комментарий Рамбана на стих 13:48]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.508Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

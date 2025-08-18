@@ -1,0 +1,59 @@
+{
+  "book": "exodus",
+  "parasha": "terumah",
+  "chapter": 26,
+  "verse": 11,
+  "hebrew": [
+    "[placeholder_word_11_1]",
+    "[placeholder_word_11_2]",
+    "[placeholder_word_11_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_11_1]",
+      "transliteration": "placeholder_11_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 11_1]",
+          "context": "[контекст для слова 11_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_11_2]",
+      "transliteration": "placeholder_11_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 11_2]",
+          "context": "[контекст для слова 11_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_11_3]",
+      "transliteration": "placeholder_11_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 11_3]",
+          "context": "[контекст для слова 11_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 26:11]",
+    "ramban": "[Комментарий Рамбана на стих 26:11]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.260Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

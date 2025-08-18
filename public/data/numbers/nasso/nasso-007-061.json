@@ -1,0 +1,59 @@
+{
+  "book": "numbers",
+  "parasha": "nasso",
+  "chapter": 7,
+  "verse": 61,
+  "hebrew": [
+    "[placeholder_word_61_1]",
+    "[placeholder_word_61_2]",
+    "[placeholder_word_61_3]"
+  ],
+  "words": [
+    {
+      "hebrew": "[placeholder_word_61_1]",
+      "transliteration": "placeholder_61_1",
+      "translations": [
+        {
+          "meaning": "[перевод слова 61_1]",
+          "context": "[контекст для слова 61_1]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_61_2]",
+      "transliteration": "placeholder_61_2",
+      "translations": [
+        {
+          "meaning": "[перевод слова 61_2]",
+          "context": "[контекст для слова 61_2]",
+          "frequency": "common"
+        }
+      ]
+    },
+    {
+      "hebrew": "[placeholder_word_61_3]",
+      "transliteration": "placeholder_61_3",
+      "translations": [
+        {
+          "meaning": "[перевод слова 61_3]",
+          "context": "[контекст для слова 61_3]",
+          "frequency": "common"
+        }
+      ]
+    }
+  ],
+  "commentaries": {
+    "rashi": "[Комментарий Раши на стих 7:61]",
+    "ramban": "[Комментарий Рамбана на стих 7:61]"
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:47:56.856Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "placeholder",
+      "translations": "placeholder",
+      "commentaries": "placeholder"
+    }
+  }
+}

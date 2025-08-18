@@ -1,0 +1,51 @@
+{
+  "book": "genesis",
+  "parasha": "beresheet",
+  "chapter": 2,
+  "verse": 1,
+  "hebrew": [
+    "דְּבַר־יְהוָה",
+    "הָיָה",
+    "אֶל־אַבְרָם",
+    "בַּמַּחֲזֶה",
+    "לֵאמֹר"
+  ],
+  "words": [
+    {
+      "hebrew": "דְּבַר־יְהוָה",
+      "transliteration": "dvar-YHVH",
+      "root": "דבר",
+      "translations": [
+        {
+          "meaning": "слово Господне",
+          "context": "божественное откровение",
+          "grammar": "имя существительное + имя собственное",
+          "sources": [
+            "Раши"
+          ]
+        }
+      ],
+      "morphology": {
+        "partOfSpeech": "noun+proper_noun",
+        "construct": true
+      },
+      "occurrences": 242,
+      "frequency": "common"
+    }
+  ],
+  "commentaries": {
+    "rashi": "После сих происшествий - после того как Авраам спас Лота и отказался от добычи.",
+    "ramban": "Слово Господне - пророческое видение, которое приходит к праведникам.",
+    "ibn_ezra": "В видении - не во сне, но в состоянии пророческого откровения."
+  },
+  "metadata": {
+    "lastUpdated": "2025-08-04T20:37:35.354Z",
+    "dataVersion": "3.0.0",
+    "completeness": {
+      "words": "complete",
+      "translations": "basic",
+      "commentaries": "complete"
+    },
+    "convertedFrom": "chapter-002.json"
+  }
+}
