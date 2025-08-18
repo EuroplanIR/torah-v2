@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: process.env.NODE_ENV === 'production' ? '/torah-v2/' : '/',
+  base: '/torah-v2/',
   server: {
     host: "::",
     port: 8080,
