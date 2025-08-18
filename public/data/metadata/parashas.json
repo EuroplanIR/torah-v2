@@ -133,6 +133,476 @@
       "description": "Яков жил"
     }
   ],
+  "exodus": [
+    {
+      "id": "shemot",
+      "hebrew": "שמות",
+      "english": "Shemot",
+      "russian": "Шмот",
+      "startChapter": 1,
+      "endChapter": 6,
+      "startVerse": 1,
+      "endVerse": 1,
+      "description": "Имена"
+    },
+    {
+      "id": "vaera",
+      "hebrew": "וארא",
+      "english": "Vaera",
+      "russian": "Ваэра",
+      "startChapter": 6,
+      "endChapter": 9,
+      "startVerse": 2,
+      "endVerse": 35,
+      "description": "И явился"
+    },
+    {
+      "id": "bo",
+      "hebrew": "בא",
+      "english": "Bo",
+      "russian": "Бо",
+      "startChapter": 10,
+      "endChapter": 13,
+      "startVerse": 1,
+      "endVerse": 16,
+      "description": "Войди"
+    },
+    {
+      "id": "beshalach",
+      "hebrew": "בשלח",
+      "english": "Beshalach",
+      "russian": "Бешалах",
+      "startChapter": 13,
+      "endChapter": 17,
+      "startVerse": 17,
+      "endVerse": 16,
+      "description": "Когда отпустил"
+    },
+    {
+      "id": "yitro",
+      "hebrew": "יתרו",
+      "english": "Yitro",
+      "russian": "Итро",
+      "startChapter": 18,
+      "endChapter": 20,
+      "startVerse": 1,
+      "endVerse": 26,
+      "description": "Итро"
+    },
+    {
+      "id": "mishpatim",
+      "hebrew": "משפטים",
+      "english": "Mishpatim",
+      "russian": "Мишпатим",
+      "startChapter": 21,
+      "endChapter": 24,
+      "startVerse": 1,
+      "endVerse": 18,
+      "description": "Законы"
+    },
+    {
+      "id": "terumah",
+      "hebrew": "תרומה",
+      "english": "Terumah",
+      "russian": "Трума",
+      "startChapter": 25,
+      "endChapter": 27,
+      "startVerse": 1,
+      "endVerse": 19,
+      "description": "Возношение"
+    },
+    {
+      "id": "tetzaveh",
+      "hebrew": "תצוה",
+      "english": "Tetzaveh",
+      "russian": "Тецаве",
+      "startChapter": 27,
+      "endChapter": 30,
+      "startVerse": 20,
+      "endVerse": 10,
+      "description": "Прикажи"
+    },
+    {
+      "id": "ki_tisa",
+      "hebrew": "כי תשא",
+      "english": "Ki Tisa",
+      "russian": "Ки Тиса",
+      "startChapter": 30,
+      "endChapter": 34,
+      "startVerse": 11,
+      "endVerse": 35,
+      "description": "Когда будешь считать"
+    },
+    {
+      "id": "vayakhel",
+      "hebrew": "ויקהל",
+      "english": "Vayakhel",
+      "russian": "Вайакhель",
+      "startChapter": 35,
+      "endChapter": 38,
+      "startVerse": 1,
+      "endVerse": 20,
+      "description": "И собрал"
+    },
+    {
+      "id": "pekudei",
+      "hebrew": "פקודי",
+      "english": "Pekudei",
+      "russian": "Пкудей",
+      "startChapter": 38,
+      "endChapter": 40,
+      "startVerse": 21,
+      "endVerse": 38,
+      "description": "Исчисления"
+    }
+  ],
+  "leviticus": [
+    {
+      "id": "vayikra",
+      "hebrew": "ויקרא",
+      "english": "Vayikra",
+      "russian": "Вайикра",
+      "startChapter": 1,
+      "endChapter": 5,
+      "startVerse": 1,
+      "endVerse": 26,
+      "description": "И воззвал"
+    },
+    {
+      "id": "tzav",
+      "hebrew": "צו",
+      "english": "Tzav",
+      "russian": "Цав",
+      "startChapter": 6,
+      "endChapter": 8,
+      "startVerse": 1,
+      "endVerse": 36,
+      "description": "Повели"
+    },
+    {
+      "id": "shemini",
+      "hebrew": "שמינירה",
+      "english": "Shemini",
+      "russian": "Шмини",
+      "startChapter": 9,
+      "endChapter": 11,
+      "startVerse": 1,
+      "endVerse": 47,
+      "description": "Восьмой"
+    },
+    {
+      "id": "tazria",
+      "hebrew": "תזריע",
+      "english": "Tazria",
+      "russian": "Тазриа",
+      "startChapter": 12,
+      "endChapter": 13,
+      "startVerse": 1,
+      "endVerse": 59,
+      "description": "Зачнет"
+    },
+    {
+      "id": "metzora",
+      "hebrew": "מצורע",
+      "english": "Metzora",
+      "russian": "Мцора",
+      "startChapter": 14,
+      "endChapter": 15,
+      "startVerse": 1,
+      "endVerse": 33,
+      "description": "Прокаженный"
+    },
+    {
+      "id": "acharei_mot",
+      "hebrew": "אחרי מות",
+      "english": "Acharei Mot",
+      "russian": "Ахарей Мот",
+      "startChapter": 16,
+      "endChapter": 18,
+      "startVerse": 1,
+      "endVerse": 30,
+      "description": "После смерти"
+    },
+    {
+      "id": "kedoshim",
+      "hebrew": "קדושים",
+      "english": "Kedoshim",
+      "russian": "Кдошим",
+      "startChapter": 19,
+      "endChapter": 20,
+      "startVerse": 1,
+      "endVerse": 27,
+      "description": "Святые"
+    },
+    {
+      "id": "emor",
+      "hebrew": "אמור",
+      "english": "Emor",
+      "russian": "Эмор",
+      "startChapter": 21,
+      "endChapter": 24,
+      "startVerse": 1,
+      "endVerse": 23,
+      "description": "Скажи"
+    },
+    {
+      "id": "behar",
+      "hebrew": "בהר",
+      "english": "Behar",
+      "russian": "Бхар",
+      "startChapter": 25,
+      "endChapter": 26,
+      "startVerse": 1,
+      "endVerse": 10,
+      "description": "На горе"
+    },
+    {
+      "id": "bechukotai",
+      "hebrew": "בחקותי",
+      "english": "Bechukotai",
+      "russian": "Бхукотай",
+      "startChapter": 26,
+      "endChapter": 27,
+      "startVerse": 11,
+      "endVerse": 34,
+      "description": "По уставам"
+    }
+  ],
+  "numbers": [
+    {
+      "id": "bamidbar",
+      "hebrew": "במדבר",
+      "english": "Bamidbar",
+      "russian": "Бамидбар",
+      "startChapter": 1,
+      "endChapter": 4,
+      "startVerse": 1,
+      "endVerse": 20,
+      "description": "В пустыне"
+    },
+    {
+      "id": "nasso",
+      "hebrew": "נשא",
+      "english": "Nasso",
+      "russian": "Насо",
+      "startChapter": 4,
+      "endChapter": 7,
+      "startVerse": 21,
+      "endVerse": 89,
+      "description": "Возьми"
+    },
+    {
+      "id": "behaalotcha",
+      "hebrew": "בהעלותך",
+      "english": "Behaalotcha",
+      "russian": "Беhаалотха",
+      "startChapter": 8,
+      "endChapter": 12,
+      "startVerse": 1,
+      "endVerse": 16,
+      "description": "Когда возжигаешь"
+    },
+    {
+      "id": "shelach",
+      "hebrew": "שלח",
+      "english": "Shelach",
+      "russian": "Шлах",
+      "startChapter": 13,
+      "endChapter": 15,
+      "startVerse": 1,
+      "endVerse": 41,
+      "description": "Пошли"
+    },
+    {
+      "id": "korach",
+      "hebrew": "קרח",
+      "english": "Korach",
+      "russian": "Корах",
+      "startChapter": 16,
+      "endChapter": 18,
+      "startVerse": 1,
+      "endVerse": 32,
+      "description": "Корах"
+    },
+    {
+      "id": "chukat",
+      "hebrew": "חקת",
+      "english": "Chukat",
+      "russian": "Хукат",
+      "startChapter": 19,
+      "endChapter": 22,
+      "startVerse": 1,
+      "endVerse": 1,
+      "description": "Устав"
+    },
+    {
+      "id": "balak",
+      "hebrew": "בלק",
+      "english": "Balak",
+      "russian": "Балак",
+      "startChapter": 22,
+      "endChapter": 25,
+      "startVerse": 2,
+      "endVerse": 9,
+      "description": "Балак"
+    },
+    {
+      "id": "pinchas",
+      "hebrew": "פינחס",
+      "english": "Pinchas",
+      "russian": "Пинхас",
+      "startChapter": 25,
+      "endChapter": 30,
+      "startVerse": 10,
+      "endVerse": 1,
+      "description": "Пинхас"
+    },
+    {
+      "id": "matot",
+      "hebrew": "מטות",
+      "english": "Matot",
+      "russian": "Матот",
+      "startChapter": 30,
+      "endChapter": 32,
+      "startVerse": 2,
+      "endVerse": 42,
+      "description": "Колена"
+    },
+    {
+      "id": "masei",
+      "hebrew": "מסעי",
+      "english": "Masei",
+      "russian": "Масэй",
+      "startChapter": 33,
+      "endChapter": 36,
+      "startVerse": 1,
+      "endVerse": 13,
+      "description": "Переходы"
+    }
+  ],
+  "deuteronomy": [
+    {
+      "id": "devarim",
+      "hebrew": "דברים",
+      "english": "Devarim",
+      "russian": "Дварим",
+      "startChapter": 1,
+      "endChapter": 3,
+      "startVerse": 1,
+      "endVerse": 22,
+      "description": "Слова"
+    },
+    {
+      "id": "vaetchanan",
+      "hebrew": "ואתחנן",
+      "english": "Vaetchanan",
+      "russian": "Ваэтханан",
+      "startChapter": 3,
+      "endChapter": 7,
+      "startVerse": 23,
+      "endVerse": 11,
+      "description": "И молился"
+    },
+    {
+      "id": "eikev",
+      "hebrew": "עקב",
+      "english": "Eikev",
+      "russian": "Экев",
+      "startChapter": 7,
+      "endChapter": 11,
+      "startVerse": 12,
+      "endVerse": 25,
+      "description": "За то, что"
+    },
+    {
+      "id": "reeh",
+      "hebrew": "ראה",
+      "english": "Reeh",
+      "russian": "Рээ",
+      "startChapter": 11,
+      "endChapter": 16,
+      "startVerse": 26,
+      "endVerse": 17,
+      "description": "Смотри"
+    },
+    {
+      "id": "shoftim",
+      "hebrew": "שפטים",
+      "english": "Shoftim",
+      "russian": "Шофтим",
+      "startChapter": 16,
+      "endChapter": 21,
+      "startVerse": 18,
+      "endVerse": 9,
+      "description": "Судьи"
+    },
+    {
+      "id": "ki_teitzei",
+      "hebrew": "כי תצא",
+      "english": "Ki Teitzei",
+      "russian": "Ки Тецэ",
+      "startChapter": 21,
+      "endChapter": 25,
+      "startVerse": 10,
+      "endVerse": 19,
+      "description": "Когда выйдешь"
+    },
+    {
+      "id": "ki_tavo",
+      "hebrew": "כי תבוא",
+      "english": "Ki Tavo",
+      "russian": "Ки Таво",
+      "startChapter": 26,
+      "endChapter": 29,
+      "startVerse": 1,
+      "endVerse": 8,
+      "description": "Когда войдешь"
+    },
+    {
+      "id": "nitzavim",
+      "hebrew": "נצבים",
+      "english": "Nitzavim",
+      "russian": "Ницавим",
+      "startChapter": 29,
+      "endChapter": 30,
+      "startVerse": 9,
+      "endVerse": 20,
+      "description": "Стоите"
+    },
+    {
+      "id": "vayeilech",
+      "hebrew": "וילך",
+      "english": "Vayeilech",
+      "russian": "Вайелех",
+      "startChapter": 31,
+      "endChapter": 31,
+      "startVerse": 1,
+      "endVerse": 30,
+      "description": "И пошел"
+    },
+    {
+      "id": "haazinu",
+      "hebrew": "האזינו",
+      "english": "Haazinu",
+      "russian": "Hаазину",
+      "startChapter": 32,
+      "endChapter": 32,
+      "startVerse": 1,
+      "endVerse": 52,
+      "description": "Внимайте"
+    },
+    {
+      "id": "vezot_haberachah",
+      "hebrew": "וזאת הברכה",
+      "english": "Vezot Haberachah",
+      "russian": "Везот hаБраха",
+      "startChapter": 33,
+      "endChapter": 34,
+      "startVerse": 1,
+      "endVerse": 12,
+      "description": "И вот благословение"
+    }
+  ],
   "lastUpdated": "2025-01-21",
   "version": "1.0.0"
 }
